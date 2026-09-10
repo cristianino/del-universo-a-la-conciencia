@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Participa · La historia del cerebro</title>
+  <meta name="description" content="Escribe por correo, responde la encuesta o abre un hilo en el foro público del proyecto." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;550;650&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <a class="salto-contenido" href="#contenido">Saltar al contenido</a>
+  <canvas class="fondo-gl" data-intensidad="0.5" aria-hidden="true"></canvas>
+
+  <nav class="nav">
+    <div class="contenedor nav__interior">
+      <a class="nav__marca" href="index.html"><span class="nav__punto"></span> Del universo a la conciencia</a>
+      <button class="nav__menu" type="button" aria-expanded="false" aria-controls="menu-principal">Menú</button>
+      <ul class="nav__enlaces" id="menu-principal">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="linea-tiempo.html">Línea de tiempo</a></li>
+        <li><a href="tesis.html">La tesis</a></li>
+        <li><a href="recursos.html">Aprende</a></li>
+        <li><a href="participa.html">Participa</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="capa-contenido">
+    <main id="contenido">
+      <header class="contenedor seccion--corta">
+        <p class="etiqueta">Canales de comunicación</p>
+        <h1>Hablemos del cerebro</h1>
+        <p class="portada__entrada">Tres formas de responder, corregir o preguntar.
+        Las tres están abiertas y las tres reciben respuesta.</p>
+      </header>
+
+      <section class="contenedor seccion--corta" aria-label="Resumen de canales">
+        <div class="rejilla canales">
+          <article class="tarjeta">
+            <div class="canal__icono" aria-hidden="true">✉</div>
+            <h3>Correo directo</h3>
+            <p>Para dudas largas, correcciones de contenido o propuestas de nuevos
+            hitos para la línea de tiempo.</p>
+            <p><a href="#contacto">Ir al formulario</a></p>
+          </article>
+          <article class="tarjeta">
+            <div class="canal__icono" aria-hidden="true">◔</div>
+            <h3>Encuesta rápida</h3>
+            <p>Dos preguntas para saber si el recorrido se entiende y qué parte
+            merece más profundidad.</p>
+            <p><a href="#encuesta">Responder ahora</a></p>
+          </article>
+          <article class="tarjeta" data-repo-bloque>
+            <div class="canal__icono" aria-hidden="true">◎</div>
+            <h3>Foro público</h3>
+            <p>Discusión abierta en el repositorio del proyecto, con historial
+            visible para cualquiera que llegue después.</p>
+            <p><a href="#foro" >Ver los hilos</a> · <a href="#" data-repo-enlace target="_blank" rel="noopener">Repositorio</a></p>
+          </article>
+        </div>
+      </section>
+
+      <section class="contenedor seccion" id="contacto" aria-labelledby="contacto-titulo">
+        <p class="etiqueta">Canal 1</p>
+        <h2 id="contacto-titulo">Escríbeme</h2>
+        <form id="form-contacto" class="tarjeta" style="max-width: 620px" novalidate>
+          <div class="campo">
+            <label for="nombre">Nombre</label>
+            <input id="nombre" name="nombre" type="text" required autocomplete="name" />
+          </div>
+          <div class="campo">
+            <label for="email">Correo electrónico</label>
+            <input id="email" name="email" type="email" required autocomplete="email" />
+            <span class="campo__nota">Solo se usa para responderte.</span>
+          </div>
+          <div class="campo">
+            <label for="asunto">Motivo</label>
+            <select id="asunto" name="motivo">
+              <option>Duda sobre el contenido</option>
+              <option>Corrección o dato impreciso</option>
+              <option>Propuesta de un nuevo hito</option>
+              <option>Uso del material en clase</option>
+              <option>Otro</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+          </div>
+          <button class="boton boton--primario" type="submit">Enviar mensaje</button>
+          <p class="aviso" role="status" hidden></p>
+        </form>
+      </section>
+
+      <section class="contenedor seccion" id="encuesta" aria-labelledby="encuesta-titulo">
+        <p class="etiqueta">Canal 2</p>
+        <h2 id="encuesta-titulo">Dos preguntas, treinta segundos</h2>
+        <p>Las respuestas deciden qué parte del recorrido se amplía en la siguiente
+        versión del sitio.</p>
+        <form id="form-encuesta" class="tarjeta" style="max-width: 620px">
+          <fieldset class="opciones">
+            <legend>¿Qué tan claro te resultó el recorrido?</legend>
+            <label class="opcion"><input type="radio" name="claridad" value="Muy claro" required /> Muy claro</label>
+            <label class="opcion"><input type="radio" name="claridad" value="Se entiende, con esfuerzo" /> Se entiende, con esfuerzo</label>
+            <label class="opcion"><input type="radio" name="claridad" value="Me perdí en varias partes" /> Me perdí en varias partes</label>
+          </fieldset>
+          <fieldset class="opciones">
+            <legend>¿Qué te gustaría que se explicara con más detalle?</legend>
+            <label class="opcion"><input type="radio" name="tema" value="El origen de la vida y los gradientes" required /> El origen de la vida y los gradientes iónicos</label>
+            <label class="opcion"><input type="radio" name="tema" value="La aparición de la cabeza" /> Cómo el movimiento generó la cabeza</label>
+            <label class="opcion"><input type="radio" name="tema" value="La corteza de los mamíferos" /> La corteza de los mamíferos</label>
+            <label class="opcion"><input type="radio" name="tema" value="El cerebro humano y el lenguaje" /> El cerebro humano y el lenguaje</label>
+          </fieldset>
+          <div class="campo">
+            <label for="comentario">¿Algo más? (opcional)</label>
+            <textarea id="comentario" name="comentario" style="min-height:90px"></textarea>
+          </div>
+          <button class="boton boton--primario" type="submit">Enviar respuesta</button>
+          <p class="aviso" role="status" hidden></p>
+        </form>
+      </section>
+
+      <section class="contenedor seccion" id="foro" aria-labelledby="foro-titulo">
+        <p class="etiqueta">Canal 3</p>
+        <h2 id="foro-titulo">Foro de discusión</h2>
+        <p>Los comentarios se publican en las Discussions del repositorio, así que
+        quedan visibles y cualquiera puede continuar un hilo abierto meses atrás.</p>
+      </section>
+    </main>
+    <footer class="pie">
+      <div class="contenedor">
+        <p>Proyecto académico · Técnicas de la comunicación virtual · Universidad Manuela Beltrán</p>
+        <p class="tenue">Cristian David Niño Chalarca · Contenido divulgativo con fines educativos</p>
+      </div>
+    </footer>
+  </div>
+  <script type="module" src="/src/pagina-participa.js"></script>
+</body>
+</html>

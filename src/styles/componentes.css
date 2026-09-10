@@ -1,0 +1,165 @@
+/* ============================================================
+   COMPONENTES — nav, portada, tarjetas, panel, formularios
+   ============================================================ */
+
+/* --- Lienzo de fondo WebGL -------------------------------- */
+.fondo-gl {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-fondo);
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.capa-contenido { position: relative; z-index: var(--z-contenido); }
+
+/* Velo entre el fondo animado y el texto. Sin él, un filamento brillante
+   puede cruzar justo por debajo de un párrafo y arruinar la lectura. */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    radial-gradient(120% 90% at 50% 0%, rgba(7, 11, 20, 0.35), rgba(7, 11, 20, 0.78) 70%);
+}
+
+/* --- Navegacion ------------------------------------------- */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-nav);
+  backdrop-filter: blur(14px);
+  background: var(--c-velo);
+  border-bottom: 1px solid var(--c-borde);
+}
+.nav__interior {
+  display: flex;
+  align-items: center;
+  gap: var(--e-5);
+  min-height: 64px;
+}
+.nav__marca {
+  display: flex; align-items: center; gap: var(--e-3);
+  font-family: var(--f-titulo);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--c-texto);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+.nav__marca:hover { color: var(--c-impulso); }
+.nav__punto {
+  width: 10px; height: 10px; border-radius: var(--r-full);
+  background: var(--c-impulso);
+  box-shadow: var(--sombra-brillo);
+  flex: none;
+}
+.nav__enlaces {
+  display: flex; align-items: center; gap: var(--e-2);
+  margin-left: auto; padding: 0; list-style: none;
+}
+.nav__enlaces a {
+  display: block;
+  padding: var(--e-2) var(--e-3);
+  border-radius: var(--r-1);
+  color: var(--c-texto-tenue);
+  text-decoration: none;
+  font-size: var(--t-peq);
+  font-weight: 550;
+}
+.nav__enlaces a:hover { color: var(--c-texto); background: var(--c-impulso-12); }
+.nav__enlaces a[aria-current='page'] { color: var(--c-impulso); background: var(--c-impulso-12); }
+
+.nav__menu {
+  display: none;
+  background: none; border: 1px solid var(--c-borde);
+  color: var(--c-texto); border-radius: var(--r-1);
+  padding: var(--e-2) var(--e-3); margin-left: auto;
+  font: inherit; font-size: var(--t-peq); cursor: pointer;
+}
+@media (max-width: 720px) {
+  .nav__menu { display: block; }
+  .nav__enlaces {
+    display: none; position: absolute; inset-inline: 0; top: 100%;
+    flex-direction: column; align-items: stretch; gap: 0;
+    background: var(--c-superficie);
+    border-bottom: 1px solid var(--c-borde);
+    padding: var(--e-2);
+  }
+  .nav__enlaces[data-abierto='true'] { display: flex; }
+}
+
+/* --- Portada ---------------------------------------------- */
+.portada { padding-block: var(--e-10) var(--e-9); }
+.portada__titulo {
+  font-size: var(--t-display);
+  margin-bottom: var(--e-5);
+  max-width: 16ch;
+}
+.portada__entrada {
+  font-size: clamp(1.05rem, 1rem + 0.5vw, 1.3rem);
+  color: var(--c-texto-tenue);
+  max-width: 56ch;
+}
+.acciones { display: flex; flex-wrap: wrap; gap: var(--e-3); margin-top: var(--e-6); }
+
+/* --- Botones ---------------------------------------------- */
+.boton {
+  display: inline-flex; align-items: center; gap: var(--e-2);
+  padding: var(--e-3) var(--e-5);
+  border-radius: var(--r-full);
+  border: 1px solid transparent;
+  font: inherit; font-weight: 600; font-size: var(--t-peq);
+  text-decoration: none; cursor: pointer;
+  transition: transform var(--ms-rapido) var(--ease),
+              background var(--ms-rapido) var(--ease),
+              color var(--ms-rapido) var(--ease);
+}
+.boton:hover { transform: translateY(-1px); }
+.boton--primario { background: var(--c-impulso); color: var(--c-texto-sobre-acento); }
+.boton--primario:hover { background: #6df0e3; color: var(--c-texto-sobre-acento); }
+.boton--fantasma { border-color: var(--c-borde); color: var(--c-texto); background: transparent; }
+.boton--fantasma:hover { background: var(--c-impulso-12); color: var(--c-texto); }
+
+/* --- Tarjetas --------------------------------------------- */
+.tarjeta {
+  background: var(--c-superficie);
+  border: 1px solid var(--c-borde);
+  border-radius: var(--r-2);
+  padding: var(--e-5);
+  box-shadow: var(--sombra-1);
+}
+.tarjeta h3 { margin-bottom: var(--e-2); }
+.tarjeta p:last-child { margin-bottom: 0; }
+
+/* --- Pie -------------------------------------------------- */
+.pie {
+  border-top: 1px solid var(--c-borde);
+  padding-block: var(--e-6);
+  color: var(--c-texto-tenue);
+  font-size: var(--t-peq);
+}
+.pie p { max-width: none; margin: 0; }
+
+/* --- Marcas de registro epistemico -------------------------
+   El color codifica la era (el paso del tiempo), asi que el registro se
+   codifica por FORMA: relleno, discontinuo o doble. Sin competir. */
+.lt__marca {
+  width: 13px;
+  height: 13px;
+  border-radius: var(--r-full);
+  flex: none;
+  display: inline-block;
+}
+[data-registro='establecido'] .lt__marca {
+  background: var(--c-impulso);
+}
+[data-registro='hipotesis'] .lt__marca {
+  border: 2px dashed var(--c-mielina);
+}
+[data-registro='interpretacion'] .lt__marca {
+  border: 2px solid var(--c-sinapsis);
+  box-shadow: inset 0 0 0 2px var(--c-abismo), inset 0 0 0 5px var(--c-sinapsis);
+}

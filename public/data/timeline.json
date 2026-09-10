@@ -1,0 +1,689 @@
+{
+  "meta": {
+    "version": 2,
+    "titulo": "La historia del cerebro: del universo a la conciencia",
+    "subtitulo": "Una misma historia contada como un solo proceso: la materia se organiza en estructuras cada vez más complejas, esas estructuras cooperan, se especializan y terminan procesando información sobre el mundo.",
+    "unidad": "Ma = millones de años atrás · ka = miles de años atrás",
+    "nota": "Cada hito añade un nivel de organización que el anterior no tenía. El cerebro es uno de los resultados de esa secuencia, no su destino.",
+    "registros": {
+      "establecido": {
+        "nombre": "Conocimiento establecido",
+        "corto": "establecido",
+        "descripcion": "Respaldado por evidencia amplia y consenso científico actual.",
+        "color": "#3FE0D0"
+      },
+      "hipotesis": {
+        "nombre": "Hipótesis en discusión",
+        "corto": "hipótesis",
+        "descripcion": "Hay evidencia y modelos, pero no una explicación única aceptada.",
+        "color": "#FFC978"
+      },
+      "interpretacion": {
+        "nombre": "Interpretación filosófica",
+        "corto": "interpretación",
+        "descripcion": "Lectura del proceso, no un hecho demostrado en una secuencia causal.",
+        "color": "#F25F9E"
+      }
+    },
+    "escala": {
+      "tipo": "tramos",
+      "descripcion": "El tiempo profundo se comprime y el reciente se estira, para que los hitos densos no se amontonen. Cada tramo recibe un ancho proporcional a su peso.",
+      "tramos": [
+        { "desde": 13800, "hasta": 4600, "peso": 1.1 },
+        { "desde": 4600,  "hasta": 3800, "peso": 1.0 },
+        { "desde": 3800,  "hasta": 2000, "peso": 0.9 },
+        { "desde": 2000,  "hasta": 1000, "peso": 1.0 },
+        { "desde": 1000,  "hasta": 650,  "peso": 1.5 },
+        { "desde": 650,   "hasta": 500,  "peso": 2.2 },
+        { "desde": 500,   "hasta": 200,  "peso": 1.5 },
+        { "desde": 200,   "hasta": 66,   "peso": 1.0 },
+        { "desde": 66,    "hasta": 7,    "peso": 1.0 },
+        { "desde": 7,     "hasta": 0.3,  "peso": 1.4 },
+        { "desde": 0.3,   "hasta": 0,    "peso": 1.4 }
+      ]
+    }
+  },
+
+  "eras": [
+    { "id": "cosmos",     "nombre": "Cosmos",              "desde": 13800, "hasta": 4600, "color": "#7C6BD9" },
+    { "id": "tierra",     "nombre": "Tierra primitiva",    "desde": 4600,  "hasta": 3800, "color": "#5C7BC4" },
+    { "id": "celular",    "nombre": "Vida celular",        "desde": 3800,  "hasta": 1000, "color": "#4FA3D1" },
+    { "id": "animal",     "nombre": "Primeros animales",   "desde": 1000,  "hasta": 252,  "color": "#3FE0D0" },
+    { "id": "vertebrado", "nombre": "Vertebrados en tierra","desde": 252,  "hasta": 66,   "color": "#FFC978" },
+    { "id": "humano",     "nombre": "Primates y humanos",  "desde": 66,    "hasta": 0,    "color": "#F25F9E" }
+  ],
+
+  "hitos": [
+    {
+      "id": "big-bang",
+      "mya": 13800,
+      "era": "cosmos",
+      "registro": "establecido",
+      "titulo": "El origen del universo",
+      "subtitulo": "la materia empieza a organizarse",
+      "aporta": "Estructura donde antes solo había energía",
+      "resumen": "El universo se expande y se enfría, y al enfriarse permite que la materia forme sus primeras estructuras estables.",
+      "detalle": [
+        "Mientras la temperatura fue extrema, ninguna estructura podía mantenerse unida. La expansión y el enfriamiento son la condición que permite que las partículas se agrupen en núcleos y, más tarde, en átomos.",
+        "Los primeros elementos son los más ligeros: sobre todo hidrógeno y helio. Con ese inventario tan pobre no se puede construir una célula, y mucho menos una neurona. Todo lo demás habrá que fabricarlo."
+      ],
+      "claves": [
+        "Enfriarse es lo que permite que algo se mantenga unido",
+        "El punto de partida es un universo de dos elementos"
+      ],
+      "etiquetas": ["cosmología", "materia"],
+      "destacado": true
+    },
+    {
+      "id": "estrellas",
+      "mya": 13400,
+      "era": "cosmos",
+      "registro": "establecido",
+      "titulo": "Las estrellas fabrican los elementos",
+      "subtitulo": "nucleosíntesis estelar",
+      "aporta": "Un repertorio químico suficiente",
+      "resumen": "La fusión en el interior de las estrellas transforma elementos ligeros en pesados, y al morir los dispersan por el espacio.",
+      "detalle": [
+        "El carbono, el oxígeno, el nitrógeno, el fósforo, el sodio, el potasio y el calcio no existían al principio. Se fabricaron dentro de estrellas y se repartieron cuando esas estrellas estallaron.",
+        "Cada generación estelar enriquece el material del que nacerá la siguiente, y también el de los planetas. La química de la vida empieza a ser posible solo después de varias rondas."
+      ],
+      "claves": [
+        "Los átomos de una neurona se fabricaron dentro de estrellas",
+        "La historia de la vida es continuación de la historia cósmica"
+      ],
+      "etiquetas": ["estrellas", "elementos"]
+    },
+    {
+      "id": "tierra",
+      "mya": 4567,
+      "era": "tierra",
+      "registro": "establecido",
+      "titulo": "El Sistema Solar y la Tierra",
+      "subtitulo": "un medio para la química",
+      "aporta": "Un lugar estable donde acumular reacciones",
+      "resumen": "De una nube de material enriquecido se forma el Sistema Solar, y la Tierra se enfría hasta admitir agua líquida.",
+      "detalle": [
+        "La Tierra nace fundida. Al enfriarse aparecen una corteza sólida y, poco después, océanos estables.",
+        "El agua líquida importa porque disuelve, transporta y concentra moléculas sin destruirlas. Es el medio donde la química puede repetir intentos durante millones de años."
+      ],
+      "claves": [
+        "El agua es el disolvente que permite ensayar química a gran escala",
+        "Un planeta templado es la mesa de trabajo del proceso"
+      ],
+      "etiquetas": ["planeta", "agua"]
+    },
+    {
+      "id": "abiogenesis",
+      "mya": 3950,
+      "era": "tierra",
+      "registro": "hipotesis",
+      "titulo": "Evolución química y abiogénesis",
+      "subtitulo": "de la materia inerte a la materia viva",
+      "aporta": "Química capaz de mantenerse a sí misma",
+      "resumen": "Las moléculas interactúan, se concentran y forman estructuras cada vez más complejas hasta cruzar un umbral difuso entre lo inerte y lo vivo.",
+      "detalle": [
+        "No existe una explicación única y cerrada de cómo ocurrió. Conviven hipótesis sobre moléculas capaces de copiarse, sobre metabolismos primitivos en fuentes hidrotermales y sobre membranas espontáneas, y probablemente ninguna sea toda la respuesta.",
+        "Lo que sí puede afirmarse es que no hubo un salto único: entre la química y la célula hubo etapas intermedias en las que distintas propiedades de lo vivo fueron apareciendo por separado y combinándose después."
+      ],
+      "claves": [
+        "No hay frontera nítida entre química y vida, hay un tramo intermedio",
+        "Las propiedades de lo vivo aparecieron por separado antes de juntarse"
+      ],
+      "etiquetas": ["abiogénesis", "química prebiótica"],
+      "destacado": true
+    },
+    {
+      "id": "membrana",
+      "mya": 3800,
+      "era": "celular",
+      "registro": "hipotesis",
+      "titulo": "Compartimentalización: un dentro y un fuera",
+      "subtitulo": "la primera frontera",
+      "aporta": "Un interior que se puede administrar",
+      "resumen": "Una doble capa de grasa encierra un volumen de química y lo separa del mar que lo rodea.",
+      "detalle": [
+        "Sin frontera, cualquier molécula útil se diluye. Con frontera, las reacciones se concentran y el conjunto puede sostener condiciones distintas a las del entorno.",
+        "Esa diferencia sostenida entre el interior y el exterior es, además, energía disponible. Todo el sistema nervioso posterior vivirá de administrarla."
+      ],
+      "claves": [
+        "Sin un adentro no hay nada que pueda estar distinto del entorno",
+        "La frontera convierte una diferencia en energía aprovechable"
+      ],
+      "etiquetas": ["membrana", "compartimentalización"],
+      "destacado": true
+    },
+    {
+      "id": "gradiente",
+      "mya": 3600,
+      "era": "celular",
+      "registro": "establecido",
+      "titulo": "La primera batería",
+      "subtitulo": "gradientes a través de la membrana",
+      "aporta": "Energía guardada en forma de desequilibrio",
+      "resumen": "Bombear iones hacia afuera cuesta energía y deja la membrana cargada como una pila diminuta que puede descargarse cuando convenga.",
+      "detalle": [
+        "Cuando esos iones regresan por un canal, el flujo se aprovecha para fabricar ATP. Es el mecanismo que comparten bacterias y mitocondrias.",
+        "El principio queda fijado aquí: mantener una diferencia eléctrica lista para soltarse. Mucho después, la neurona usará exactamente la misma idea para transmitir información en lugar de energía."
+      ],
+      "claves": [
+        "La célula viva es literalmente un sistema eléctrico",
+        "El mismo truco servirá luego para transmitir señales"
+      ],
+      "etiquetas": ["iones", "energía"]
+    },
+    {
+      "id": "herencia",
+      "mya": 3500,
+      "era": "celular",
+      "registro": "hipotesis",
+      "titulo": "Los primeros sistemas vivos",
+      "subtitulo": "aparece la información heredable",
+      "aporta": "Información que pasa de una generación a otra",
+      "resumen": "Antes de la célula moderna existieron sistemas más simples capaces de sostener su organización, usar energía y transmitir información a copias de sí mismos.",
+      "detalle": [
+        "En cuanto un sistema se copia con pequeñas variaciones y algunas copias funcionan mejor que otras, la evolución empieza a actuar sola. No hace falta nada más.",
+        "Ese es el momento en que el proceso se vuelve acumulativo: lo que funciona se conserva, y lo conservado sirve de base para el siguiente intento."
+      ],
+      "claves": [
+        "Copiarse con variación es todo lo que la evolución necesita para empezar",
+        "A partir de aquí el proceso acumula en vez de reiniciarse"
+      ],
+      "etiquetas": ["herencia", "evolución"]
+    },
+    {
+      "id": "endosimbiosis",
+      "mya": 1800,
+      "era": "celular",
+      "registro": "establecido",
+      "titulo": "Endosimbiosis: cooperar produce capacidades nuevas",
+      "subtitulo": "la célula eucariota",
+      "aporta": "Una unidad mayor hecha de unidades que cooperan",
+      "resumen": "Las mitocondrias descienden de bacterias incorporadas por otra célula: dos organismos que se integran y forman uno con capacidades que ninguno tenía por separado.",
+      "detalle": [
+        "La integración multiplicó el presupuesto energético celular. Con más energía disponible caben genomas grandes, membranas extensas y maquinaria cara.",
+        "Aparece aquí el patrón que se repetirá en todos los niveles siguientes: unidades simples que cooperan producen una unidad mayor con propiedades nuevas. Lo veremos otra vez en las colonias, en los organismos multicelulares y en los grupos sociales."
+      ],
+      "claves": [
+        "La evolución no avanza solo compitiendo: integrar también inventa",
+        "El patrón se repetirá en cada nivel posterior",
+        "Pensar es caro, y aquí es donde empieza a ser pagable"
+      ],
+      "etiquetas": ["endosimbiosis", "cooperación", "mitocondria"],
+      "destacado": true
+    },
+    {
+      "id": "bomba-sodio-potasio",
+      "mya": 1500,
+      "era": "celular",
+      "registro": "establecido",
+      "titulo": "La bomba de sodio y potasio",
+      "subtitulo": "tres afuera, dos adentro",
+      "aporta": "Un desequilibrio sostenido a propósito",
+      "resumen": "Una proteína gasta ATP sin descanso para sacar tres iones de sodio e introducir dos de potasio, dejando el interior celular negativo y listo para disparar.",
+      "detalle": [
+        "La bomba no transmite información: prepara el terreno. Mantiene el interior unos setenta milivoltios por debajo del exterior, y eso es el potencial de reposo.",
+        "El reposo funciona como un resorte comprimido. Cuando un canal se abre y entra sodio de golpe, el resorte se suelta y la señal viaja; después la bomba vuelve a comprimirlo, y para eso quema una porción considerable de toda la energía del cuerpo."
+      ],
+      "claves": [
+        "El reposo no es pasividad, es trabajo constante",
+        "Sin gradiente previo no hay impulso posible"
+      ],
+      "etiquetas": ["iones", "mecanismo", "membrana"]
+    },
+    {
+      "id": "multicelularidad",
+      "mya": 1000,
+      "era": "animal",
+      "registro": "establecido",
+      "titulo": "De la unicelularidad a la multicelularidad",
+      "subtitulo": "aparece la especialización",
+      "aporta": "Un cuerpo con células que hacen cosas distintas",
+      "resumen": "Algunas células permanecen juntas tras dividirse, y esa asociación resulta ventajosa el tiempo suficiente como para quedarse.",
+      "detalle": [
+        "Mientras todas las células hacían de todo, ninguna podía hacer nada especialmente bien. Al mantenerse unidas pueden repartirse el trabajo: unas se dedican a alimentar, otras a sostener, otras a reproducir.",
+        "La especialización celular es la condición previa de la neurona. Antes de que exista una célula dedicada a transmitir información, tiene que existir un cuerpo donde dedicarse a una sola cosa sea viable."
+      ],
+      "claves": [
+        "La especialización es la clave, y solo es posible dentro de un cuerpo",
+        "Tercer nivel del mismo patrón: moléculas, células, ahora organismos"
+      ],
+      "etiquetas": ["multicelularidad", "especialización"],
+      "destacado": true
+    },
+    {
+      "id": "senales-quimicas",
+      "mya": 900,
+      "era": "animal",
+      "registro": "establecido",
+      "titulo": "Comunicación entre células",
+      "subtitulo": "coordinación por señales químicas",
+      "aporta": "Células que responden al estado de otras",
+      "resumen": "Vivir integradas obliga a coordinarse, y la primera coordinación es química: unas células reaccionan a lo que otras liberan.",
+      "detalle": [
+        "Los coanoflagelados, parientes unicelulares de los animales, ya fabrican proteínas de adhesión y señalización que en nosotros construyen contactos sinápticos. Las piezas existían antes que la función.",
+        "La difusión química es lenta, pero para un organismo pequeño y quieto es más que suficiente. El problema aparecerá cuando haya que coordinar un cuerpo grande que además se mueve."
+      ],
+      "claves": [
+        "Las piezas moleculares de la sinapsis son anteriores a la sinapsis",
+        "La difusión basta mientras el cuerpo sea pequeño y lento"
+      ],
+      "etiquetas": ["señalización", "coanoflagelados"]
+    },
+    {
+      "id": "esponjas",
+      "mya": 800,
+      "era": "animal",
+      "registro": "establecido",
+      "titulo": "Los primeros animales: esponjas y placozoos",
+      "subtitulo": "coordinación sin neuronas",
+      "aporta": "División del trabajo dentro de un animal",
+      "resumen": "Los primeros animales reparten funciones entre tipos celulares distintos y se coordinan sin un solo cable nervioso.",
+      "detalle": [
+        "Una esponja tiene células que filtran, células que sostienen y células que se transforman en lo que haga falta. No tiene neuronas, pero sí buena parte del repertorio molecular que después usará la neurona.",
+        "Funciona porque la esponja no va a ninguna parte. Quien no se mueve puede permitirse ser lento: la comunicación local alcanza mientras no haya que coordinar movimientos rápidos de todo el cuerpo."
+      ],
+      "claves": [
+        "Se puede ser animal sin sistema nervioso",
+        "El repertorio genético llega antes que el órgano"
+      ],
+      "etiquetas": ["esponjas", "animales", "tejidos"],
+      "fuentes": [
+        { "texto": "Näjle, S. R. et al. (2023). Stepwise emergence of the neuronal gene expression program in early animal evolution. Cell, 186(21)." }
+      ]
+    },
+    {
+      "id": "fotosensibilidad",
+      "mya": 700,
+      "era": "animal",
+      "registro": "establecido",
+      "titulo": "Sensibilidad a la luz",
+      "subtitulo": "el entorno empieza a ser información",
+      "aporta": "Datos sobre lo que aún no se ha tocado",
+      "resumen": "Detectar luz no exige formar una imagen: basta distinguir intensidad y dirección para obtener información útil sobre el ambiente.",
+      "detalle": [
+        "Una mancha de células fotosensibles ya permite saber si hay más luz arriba o abajo, si algo pasó por encima, si conviene subir o bajar. Es poca información, pero llega antes que el contacto.",
+        "Esa anticipación es cualitativamente nueva: por primera vez el organismo puede responder a algo que todavía no lo ha alcanzado."
+      ],
+      "claves": [
+        "Percibir a distancia es percibir el futuro inmediato",
+        "La imagen vendrá mucho después; primero basta con intensidad y dirección"
+      ],
+      "etiquetas": ["luz", "sensores"]
+    },
+    {
+      "id": "neuronas",
+      "mya": 650,
+      "era": "animal",
+      "registro": "establecido",
+      "titulo": "Aparecen las primeras neuronas",
+      "subtitulo": "la célula que transmite",
+      "aporta": "Una célula especializada en información",
+      "resumen": "Con animales capaces de desplazarse activamente, el problema cambia: hay que detectar, integrar y responder mientras el entorno se mueve.",
+      "detalle": [
+        "Surgen células especializadas en recibir y transmitir información, con estructuras alargadas y contactos dedicados. La señal deja de depender de que una sustancia difunda y pasa a viajar por un cable.",
+        "Si las neuronas se inventaron una sola vez o dos de forma independiente sigue en discusión: los ctenóforos presentan diferencias moleculares llamativas frente al resto de los animales, y no hay consenso sobre cómo interpretarlas."
+      ],
+      "claves": [
+        "El movimiento es lo que hace insuficiente la comunicación química",
+        "Si hubo una o dos invenciones de la neurona sigue abierto"
+      ],
+      "etiquetas": ["neurona", "ctenóforos"],
+      "destacado": true,
+      "fuentes": [
+        { "texto": "Näjle, S. R. et al. (2023). Stepwise emergence of the neuronal gene expression program in early animal evolution. Cell, 186(21)." }
+      ]
+    },
+    {
+      "id": "redes-nerviosas",
+      "mya": 600,
+      "era": "animal",
+      "registro": "establecido",
+      "titulo": "Redes nerviosas difusas",
+      "subtitulo": "organización distribuida",
+      "aporta": "Coordinación rápida a distancia",
+      "resumen": "En medusas y anémonas las neuronas forman una malla sin centro: no hay jefe, ni delante ni detrás, y un estímulo se propaga en todas direcciones.",
+      "detalle": [
+        "Es la arquitectura adecuada para un cuerpo de simetría radial que espera a que el alimento llegue. Cualquier punto puede recibir y cualquier punto puede responder.",
+        "El salto cualitativo es la velocidad: la información ya no difunde, viaja. Un extremo del cuerpo puede enterarse de lo que ocurre en el otro en milisegundos."
+      ],
+      "claves": [
+        "El primer sistema nervioso real no tiene centro",
+        "Con velocidad, el cuerpo empieza a actuar como una sola cosa"
+      ],
+      "etiquetas": ["cnidarios", "red nerviosa"]
+    },
+    {
+      "id": "cefalizacion",
+      "mya": 570,
+      "era": "animal",
+      "registro": "establecido",
+      "titulo": "Cefalización: la primera agrupación neuronal",
+      "subtitulo": "punto de inflexión",
+      "aporta": "Un centro donde se integra todo",
+      "resumen": "Cuando un animal avanza siempre en la misma dirección, el extremo que va delante encuentra primero el entorno, y ahí se concentran los sentidos.",
+      "detalle": [
+        "Donde se acumulan los sensores conviene acumular también el tejido que los integra: procesar cerca de donde entra la información ahorra tiempo y cableado. Los ganglios anteriores crecen hasta convertirse en un centro de mando.",
+        "La cabeza no fue un plan previo. Es la consecuencia geométrica de moverse hacia algún lado, y es probablemente el punto de inflexión más importante de toda esta historia."
+      ],
+      "claves": [
+        "El movimiento dirigido crea la cabeza",
+        "Anticipar exige un centro, no una red repartida",
+        "Simetría bilateral: delante y detrás, arriba y abajo"
+      ],
+      "etiquetas": ["cefalización", "bilaterales", "movimiento"],
+      "destacado": true
+    },
+    {
+      "id": "cambrico",
+      "mya": 540,
+      "era": "animal",
+      "registro": "establecido",
+      "titulo": "Explosión cámbrica",
+      "subtitulo": "ojos, depredación y carrera armamentista",
+      "aporta": "Predicción de lo que va a ocurrir",
+      "resumen": "Aparecen ojos capaces de formar imágenes, y ver a distancia cambia por completo el costo de equivocarse.",
+      "detalle": [
+        "Depredador y presa entran en una competencia sin final. Detectar antes, decidir antes y ejecutar antes se convierte en la diferencia entre comer y ser comido.",
+        "El sistema nervioso deja de ser un coordinador y empieza a ser un predictor: ya no basta con responder a lo que pasa, hay que modelar lo que está a punto de pasar."
+      ],
+      "claves": [
+        "La visión multiplica la información y el costo de procesarla",
+        "Aquí el cerebro empieza a modelar el futuro inmediato"
+      ],
+      "etiquetas": ["cámbrico", "visión", "depredación"]
+    },
+    {
+      "id": "tubo-neural",
+      "mya": 525,
+      "era": "animal",
+      "registro": "establecido",
+      "titulo": "El primer cerebro centralizado",
+      "subtitulo": "vertebrados primitivos",
+      "aporta": "Un órgano dedicado, no un tejido repartido",
+      "resumen": "Nuestro linaje enrolla una lámina de tejido en un tubo hueco a lo largo del dorso, y el extremo anterior se abulta hasta formar el encéfalo.",
+      "detalle": [
+        "Cuando el comportamiento se complica, una red totalmente distribuida deja de ser eficiente: conviene un órgano que reciba, integre y ordene.",
+        "Otros linajes resolvieron lo mismo de otra manera. Artrópodos y moluscos tienen cordones nerviosos ventrales y ganglios repartidos, y un pulpo mantiene la mayoría de sus neuronas en los brazos. No hay una única línea que lleve al cerebro humano."
+      ],
+      "claves": [
+        "Centralizar es una solución, no la solución",
+        "Un plano corporal fijado hace 500 millones de años nos sigue definiendo"
+      ],
+      "etiquetas": ["cordados", "tubo neural", "centralización"]
+    },
+    {
+      "id": "tres-vesiculas",
+      "mya": 500,
+      "era": "animal",
+      "registro": "establecido",
+      "titulo": "Encéfalo en tres regiones",
+      "subtitulo": "los primeros peces",
+      "aporta": "Jerarquía: niveles que trabajan a la vez",
+      "resumen": "El extremo del tubo se divide en tres vesículas que darán tronco, mesencéfalo y prosencéfalo.",
+      "detalle": [
+        "Cada una se especializa: la posterior en equilibrio y funciones vitales, la media en respuestas visuales rápidas, la anterior en olfato y en integrar todo lo demás.",
+        "La evolución añade capas antes que sustituir las existentes. El tronco encefálico que hoy nos mantiene vivos es más antiguo que los huesos, y sigue operando por debajo de todo lo que pensamos."
+      ],
+      "claves": [
+        "Se acumulan niveles, no se reemplazan",
+        "Lo más antiguo sigue funcionando debajo de lo más nuevo"
+      ],
+      "etiquetas": ["peces", "anatomía"]
+    },
+    {
+      "id": "mielina",
+      "mya": 425,
+      "era": "animal",
+      "registro": "establecido",
+      "titulo": "Mielina",
+      "subtitulo": "aislar para ir más rápido",
+      "aporta": "Velocidad sin ocupar más espacio",
+      "resumen": "Envolver los axones en capas de grasa multiplica hasta cien veces la velocidad del impulso sin engrosar el cable.",
+      "detalle": [
+        "El impulso deja de recorrer la membrana punto por punto y salta entre los espacios sin aislar. Llega mucho antes y gastando menos.",
+        "La alternativa para ganar velocidad era engrosar el axón, que ocupa demasiado. La mielina hace posible un cerebro compacto con muchísimas conexiones rápidas."
+      ],
+      "claves": [
+        "Un problema de ingeniería resuelto con aislamiento",
+        "Sin mielina no cabría un cerebro tan conectado en un cráneo"
+      ],
+      "etiquetas": ["axón", "velocidad", "mecanismo"]
+    },
+    {
+      "id": "tetrapodos",
+      "mya": 370,
+      "era": "vertebrado",
+      "registro": "establecido",
+      "titulo": "Salir del agua",
+      "subtitulo": "el aire cambia los sentidos",
+      "aporta": "Tiempo suficiente para deliberar",
+      "resumen": "Ver y oler en el aire alcanza mucha más distancia que en el agua, y con la distancia aparece margen para elegir.",
+      "detalle": [
+        "En tierra un animal percibe lo que ocurre bastante antes de que le afecte. Ese margen es la materia prima de la deliberación: ya no basta con reaccionar, conviene comparar opciones.",
+        "Los circuitos que evalúan alternativas antes de actuar encuentran aquí su primera ventaja clara."
+      ],
+      "claves": [
+        "Percibir más lejos permite decidir en lugar de solo reaccionar",
+        "Elegir es un lujo que solo existe si sobra tiempo"
+      ],
+      "etiquetas": ["tetrápodos", "conducta"]
+    },
+    {
+      "id": "palio",
+      "mya": 320,
+      "era": "vertebrado",
+      "registro": "establecido",
+      "titulo": "El palio",
+      "subtitulo": "el tejido que será corteza",
+      "aporta": "Asociación entre sentidos distintos",
+      "resumen": "En los amniotas, la superficie dorsal del prosencéfalo se organiza en un tejido dedicado a cruzar información de varios sentidos.",
+      "detalle": [
+        "El palio no pertenece a un sentido concreto: recibe entradas de varios y busca coincidencias entre ellas. Asociar pasa a ser el trabajo principal.",
+        "En aves y reptiles este tejido tomó formas muy distintas a la nuestra y sostiene igualmente conductas complejas. La inteligencia no depende de una arquitectura única."
+      ],
+      "claves": [
+        "Cruzar sentidos distintos abre la puerta al aprendizaje flexible",
+        "Hay más de una arquitectura posible para la cognición compleja"
+      ],
+      "etiquetas": ["palio", "amniotas"]
+    },
+    {
+      "id": "neocorteza",
+      "mya": 200,
+      "era": "vertebrado",
+      "registro": "establecido",
+      "titulo": "Mamíferos: la neocorteza",
+      "subtitulo": "el cerebro crece por capas",
+      "aporta": "Un módulo repetible que escala solo",
+      "resumen": "Aparece un tejido cortical de seis capas cuya microestructura se repite igual en toda su extensión.",
+      "detalle": [
+        "La misma columna de circuitos procesa sonido en una región y tacto en otra. Ampliar capacidad consiste en repetir el módulo, no en inventar uno nuevo: por eso el cerebro puede crecer sin rediseñarse.",
+        "Los primeros mamíferos eran nocturnos y dependían del olfato, el oído y el tacto para reconstruir un mundo que no veían. La corteza es en buena medida respuesta a ese problema, y los pliegues existen para meter más superficie en el mismo cráneo."
+      ],
+      "claves": [
+        "Un circuito genérico que se repite es lo que permite escalar",
+        "Los pliegues son superficie ganada, no complejidad decorativa"
+      ],
+      "etiquetas": ["neocorteza", "mamíferos"],
+      "destacado": true
+    },
+    {
+      "id": "primates",
+      "mya": 60,
+      "era": "humano",
+      "registro": "establecido",
+      "titulo": "Primates: ver en relieve y vivir en grupo",
+      "subtitulo": "aparece el cerebro social",
+      "aporta": "Modelar lo que hará otro individuo",
+      "resumen": "Tras la extinción de los dinosaurios, un linaje arborícola desarrolla visión estereoscópica, manos precisas y vida social intensa.",
+      "detalle": [
+        "Saltar entre ramas exige calcular distancias con exactitud, y la visión en relieve ocupa una porción enorme de la corteza. La mano que agarra añade un control motor fino que también consume territorio cortical.",
+        "Vivir en grupo introduce un problema distinto: predecir lo que hará otro individuo que a su vez está prediciendo. Seguir alianzas, jerarquías y engaños resulta cognitivamente más caro que cualquier tarea física."
+      ],
+      "claves": [
+        "El grupo social es una presión selectiva sobre la inteligencia",
+        "Modelar a otro que te modela es un problema sin techo"
+      ],
+      "etiquetas": ["primates", "social", "visión"]
+    },
+    {
+      "id": "bipedismo",
+      "mya": 7,
+      "era": "humano",
+      "registro": "establecido",
+      "titulo": "Ponerse de pie",
+      "subtitulo": "homininos",
+      "aporta": "Manos disponibles de forma permanente",
+      "resumen": "La postura erguida libera las manos todo el tiempo, no solo al detenerse, y reorganiza el cuerpo entero.",
+      "detalle": [
+        "Transportar, cargar crías y manipular objetos deja de competir con desplazarse. La mano se vuelve un órgano de uso continuo.",
+        "El cráneo se reequilibra sobre la columna, lo que permitirá alojar después un encéfalo mucho más pesado. La pelvis, en cambio, se estrecha, y ese conflicto marcará el nacimiento humano."
+      ],
+      "claves": [
+        "Manos libres siempre, no ocasionalmente",
+        "El cambio postural condiciona el crecimiento futuro del cráneo"
+      ],
+      "etiquetas": ["homininos", "bipedismo"]
+    },
+    {
+      "id": "herramientas",
+      "mya": 2.5,
+      "era": "humano",
+      "registro": "establecido",
+      "titulo": "Piedra tallada",
+      "subtitulo": "un plan sostenido en la mente",
+      "aporta": "Mantener presente algo que aún no existe",
+      "resumen": "Fabricar una herramienta exige encadenar golpes hacia una forma que todavía no está ahí.",
+      "detalle": [
+        "Tallar no es golpear: hay que elegir la piedra, prever cómo se fractura y sostener el objetivo mientras se ejecutan pasos cuyo beneficio solo llega al final.",
+        "Además hay que enseñarlo. La transmisión de la técnica entre generaciones convierte el aprendizaje social en un factor evolutivo por derecho propio."
+      ],
+      "claves": [
+        "Planificar es sostener en la mente algo que no existe todavía",
+        "La cultura empieza a acumularse y a heredarse"
+      ],
+      "etiquetas": ["herramientas", "cognición"]
+    },
+    {
+      "id": "fuego",
+      "mya": 0.8,
+      "era": "humano",
+      "registro": "establecido",
+      "titulo": "El fuego y la cocción",
+      "subtitulo": "energía para un órgano carísimo",
+      "aporta": "Presupuesto para sostener un cerebro grande",
+      "resumen": "Cocinar predigiere la comida y libera energía y horas de masticación que el cerebro puede aprovechar.",
+      "detalle": [
+        "El alimento cocido entrega más calorías con menos esfuerzo digestivo. El intestino se acorta y el encéfalo, que consume alrededor del veinte por ciento de la energía en reposo con apenas el dos por ciento de la masa, dispone de más margen.",
+        "El fuego también crea la hoguera: horas de vigilia compartida alrededor de la luz, un espacio para narrar, coordinar y enseñar. La energía y el tiempo social llegan juntos."
+      ],
+      "claves": [
+        "Cocinar es digestión externa",
+        "El órgano más caro del cuerpo necesitaba que alguien pagara la cuenta"
+      ],
+      "etiquetas": ["fuego", "energía", "erectus"],
+      "destacado": true
+    },
+    {
+      "id": "sapiens",
+      "mya": 0.3,
+      "era": "humano",
+      "registro": "establecido",
+      "titulo": "Homo sapiens",
+      "subtitulo": "la expansión cerebral se detiene",
+      "aporta": "Un cerebro que ya no crece pero se reorganiza",
+      "resumen": "Cerca de mil trescientos centímetros cúbicos y ochenta y seis mil millones de neuronas, con un desarrollo que continúa años después del nacimiento.",
+      "detalle": [
+        "Nacemos con el cerebro muy inmaduro y buena parte del cableado se establece fuera del útero. Eso expone el desarrollo neuronal al entorno social y cultural, y convierte la crianza en parte del proceso de construcción del cerebro.",
+        "Hay duplicaciones génicas propias de nuestro linaje —NOTCH2NL, ARHGAP11B— asociadas al aumento de progenitores corticales y al retraso en la maduración de las sinapsis. No hay una sola mutación decisiva, sino varios cambios acumulados."
+      ],
+      "claves": [
+        "Buena parte del cerebro se construye después de nacer",
+        "No hubo una mutación mágica, sino varios cambios sumados"
+      ],
+      "etiquetas": ["sapiens", "desarrollo", "genes"],
+      "fuentes": [
+        { "texto": "Florio, M. et al. (2015). Human-specific gene ARHGAP11B promotes basal progenitor amplification and neocortex expansion. Science, 347(6229)." },
+        { "texto": "Fiddes, I. T. et al. (2018). Human-specific NOTCH2NL genes affect Notch signaling and cortical neurogenesis. Cell, 173(6)." }
+      ]
+    },
+    {
+      "id": "patrones",
+      "mya": 0.07,
+      "era": "humano",
+      "registro": "hipotesis",
+      "titulo": "Reconocimiento de patrones",
+      "subtitulo": "de la regularidad a la explicación",
+      "aporta": "Buscar la causa, no solo la regularidad",
+      "resumen": "Detectar regularidades permite anticipar; buscar la razón de esas regularidades es lo que abre la puerta al pensamiento explicativo.",
+      "detalle": [
+        "Reconocer patrones convierte la experiencia pasada en predicción. Es una capacidad antigua y compartida con muchos animales.",
+        "Lo que parece distintivo del pensamiento simbólico humano es dar el paso siguiente: si el cerebro puede reconocer patrones, puede empezar a preguntar por qué existen. La pregunta \"por qué\" es una extensión de esa misma maquinaria. Cuándo y cómo apareció está en discusión."
+      ],
+      "claves": [
+        "Anticipar es convertir el pasado en futuro",
+        "La pregunta por la causa nace de la misma máquina que detecta patrones"
+      ],
+      "etiquetas": ["cognición", "símbolos"]
+    },
+    {
+      "id": "lenguaje",
+      "mya": 0.05,
+      "era": "humano",
+      "registro": "hipotesis",
+      "titulo": "Lenguaje",
+      "subtitulo": "información que se hereda fuera del cuerpo",
+      "aporta": "Experiencia transferible sin vivirla",
+      "resumen": "El lenguaje permite que lo que uno aprendió llegue a otro sin que este tenga que pasar por lo mismo.",
+      "detalle": [
+        "El conocimiento deja de depender de lo que cada individuo alcanza a experimentar. Una generación hereda genes, pero también herramientas, conceptos, historias y modelos.",
+        "El lenguaje además puede hablar de sí mismo: nombrar palabras, reglas y significados permite corregirlo y afinarlo, y con ello ampliar el espacio de lo pensable. Las fechas concretas de su aparición siguen siendo objeto de debate."
+      ],
+      "claves": [
+        "La cultura se convierte en un segundo canal de herencia",
+        "Un lenguaje que se describe a sí mismo puede mejorarse"
+      ],
+      "etiquetas": ["lenguaje", "cultura"],
+      "destacado": true
+    },
+    {
+      "id": "cultura",
+      "mya": 0.012,
+      "era": "humano",
+      "registro": "establecido",
+      "titulo": "Evolución cultural",
+      "subtitulo": "memoria fuera del organismo",
+      "aporta": "Cambio más rápido que el biológico",
+      "resumen": "Con la agricultura, la escritura y las instituciones, la información empieza a acumularse fuera de los cuerpos y a un ritmo que la biología no alcanza.",
+      "detalle": [
+        "La escritura externaliza la memoria y el cálculo. Lo que antes debía caber en una cabeza pasa a caber en un objeto, y deja de perderse con quien lo sabía.",
+        "Desde ese momento la evolución relevante para la especie ya no es solo genética. La cultura cambia en décadas lo que la biología tardaría cientos de miles de años en mover."
+      ],
+      "claves": [
+        "Escribir es sacar la memoria del cráneo",
+        "Dos evoluciones a la vez, y una es muchísimo más rápida"
+      ],
+      "etiquetas": ["escritura", "cultura"]
+    },
+    {
+      "id": "autorreferencia",
+      "mya": 0,
+      "era": "humano",
+      "registro": "interpretacion",
+      "titulo": "El sistema que se pregunta por sí mismo",
+      "subtitulo": "autorreferencia",
+      "aporta": "Un modelo del mundo que se incluye a sí mismo",
+      "resumen": "Representar el mundo y representarse a uno mismo dentro de ese mundo abre la pregunta que ninguna otra etapa podía formular.",
+      "detalle": [
+        "La pregunta deja de ser solo qué está ocurriendo, pasa a ser por qué está ocurriendo y finalmente por qué existo yo. Este tramo se presenta como lectura filosófica del proceso, no como secuencia causal demostrada.",
+        "Nada de esto significa que la evolución tuviera como meta el cerebro humano. Lo que muestra la secuencia es otra cosa: a lo largo de la historia del universo han aparecido sistemas capaces de organizar materia y energía de formas cada vez más complejas, cooperar, conservar información y responder a su entorno. Que uno de ellos haya terminado preguntándose por su propia existencia es el resultado más singular que conocemos de ese proceso."
+      ],
+      "claves": [
+        "El modelo del mundo termina incluyendo al que lo construye",
+        "No hay meta: hay una cadena de niveles y nosotros somos uno de sus resultados"
+      ],
+      "etiquetas": ["conciencia", "filosofía"],
+      "destacado": true
+    }
+  ]
+}

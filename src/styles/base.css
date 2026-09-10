@@ -1,0 +1,107 @@
+/* ============================================================
+   BASE — reset moderado, tipografia y utilidades de maquetacion
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--c-abismo);
+  color: var(--c-texto);
+  font-family: var(--f-texto);
+  font-size: var(--t-base);
+  line-height: var(--lh-texto);
+  font-synthesis-weight: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--f-titulo);
+  font-weight: 600;
+  line-height: var(--lh-titulo);
+  letter-spacing: var(--ls-titulo);
+  margin: 0 0 var(--e-4);
+  text-wrap: balance;
+}
+h1 { font-size: var(--t-h1); }
+h2 { font-size: var(--t-h2); }
+h3 { font-size: var(--t-h3); font-family: var(--f-texto); font-weight: 650; letter-spacing: 0; }
+
+p, li { max-width: var(--ancho-texto); text-wrap: pretty; }
+p { margin: 0 0 var(--e-4); }
+
+a {
+  color: var(--c-impulso);
+  text-decoration-color: var(--c-impulso-32);
+  text-underline-offset: 3px;
+  transition: color var(--ms-rapido) var(--ease);
+}
+a:hover { color: var(--c-texto); text-decoration-color: currentColor; }
+
+:where(a, button, input, textarea, select, [tabindex]):focus-visible {
+  outline: 2px solid var(--c-impulso);
+  outline-offset: 3px;
+  border-radius: var(--r-1);
+}
+
+img, svg, canvas { display: block; max-width: 100%; }
+
+/* --- Utilidades ------------------------------------------- */
+
+.contenedor {
+  width: min(100% - 2 * var(--e-5), var(--ancho-sitio));
+  margin-inline: auto;
+}
+
+.seccion { padding-block: var(--e-8); }
+.seccion--corta { padding-block: var(--e-7); }
+
+.etiqueta {
+  font-family: var(--f-dato);
+  font-size: var(--t-micro);
+  letter-spacing: var(--ls-etiqueta);
+  text-transform: uppercase;
+  color: var(--c-impulso);
+  margin: 0 0 var(--e-3);
+}
+
+.tenue { color: var(--c-texto-tenue); }
+
+.solo-lectores {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.salto-contenido {
+  position: absolute;
+  left: var(--e-4);
+  top: calc(-1 * var(--e-10));
+  z-index: calc(var(--z-nav) + 1);
+  background: var(--c-impulso);
+  color: var(--c-texto-sobre-acento);
+  padding: var(--e-2) var(--e-4);
+  border-radius: var(--r-1);
+  font-weight: 600;
+  transition: top var(--ms-rapido) var(--ease);
+}
+.salto-contenido:focus { top: var(--e-4); }
+
+.rejilla {
+  display: grid;
+  gap: var(--e-5);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+}

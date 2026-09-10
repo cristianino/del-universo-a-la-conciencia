@@ -1,0 +1,76 @@
+/* ============================================================
+   SISTEMA DE DISENO — "Abismo bioluminiscente"
+   Un unico lugar donde viven color, tipografia, ritmo y sombra.
+   Cambiar un valor aqui cambia el sitio entero.
+   ============================================================ */
+
+:root {
+  /* --- Color: superficies --------------------------------- */
+  --c-abismo:      #070B14;  /* fondo general, el vacio anterior a la vida */
+  --c-superficie:  #101A2E;  /* tarjetas y paneles */
+  --c-elevado:     #172542;  /* panel de detalle, estados hover */
+  --c-borde:       #22355C;  /* separadores y contornos */
+
+  /* --- Color: acentos ------------------------------------- */
+  --c-impulso:     #3FE0D0;  /* cian: energia, senal electrica, accion */
+  --c-sinapsis:    #F25F9E;  /* magenta: conexion, hito destacado */
+  --c-mielina:    #FFC978;  /* ambar: usado con moderacion, calor biologico */
+
+  /* --- Color: texto --------------------------------------- */
+  --c-texto:       #E8EEF7;
+  --c-texto-tenue: #9BAAC4;
+  --c-texto-sobre-acento: #041019;
+
+  /* --- Color: derivados (transparencias) ------------------ */
+  --c-impulso-12:  rgba(63, 224, 208, 0.12);
+  --c-impulso-32:  rgba(63, 224, 208, 0.32);
+  --c-sinapsis-16: rgba(242, 95, 158, 0.16);
+  --c-velo:        rgba(7, 11, 20, 0.72);
+
+  /* --- Tipografia ----------------------------------------- */
+  --f-titulo: 'Fraunces', 'Iowan Old Style', Georgia, serif;
+  --f-texto:  'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --f-dato:   'JetBrains Mono', ui-monospace, 'Cascadia Code', monospace;
+
+  /* Escala tipografica fluida (clamp: minimo, ideal, maximo) */
+  --t-display: clamp(2.6rem, 1.6rem + 4.6vw, 5.2rem);
+  --t-h1:      clamp(2.1rem, 1.5rem + 2.6vw, 3.4rem);
+  --t-h2:      clamp(1.6rem, 1.3rem + 1.4vw, 2.25rem);
+  --t-h3:      clamp(1.2rem, 1.1rem + 0.6vw, 1.5rem);
+  --t-base:    clamp(1rem, 0.97rem + 0.16vw, 1.09rem);
+  --t-peq:     0.875rem;
+  --t-micro:   0.75rem;
+
+  --lh-titulo: 1.12;
+  --lh-texto:  1.65;
+  --ls-titulo: -0.02em;
+  --ls-etiqueta: 0.14em;
+
+  /* --- Ritmo y espacio (escala de 4 px) ------------------- */
+  --e-1: 0.25rem;  --e-2: 0.5rem;   --e-3: 0.75rem;  --e-4: 1rem;
+  --e-5: 1.5rem;   --e-6: 2rem;     --e-7: 3rem;     --e-8: 4rem;
+  --e-9: 6rem;     --e-10: 8rem;
+
+  --ancho-texto: 68ch;   /* medida optima de lectura */
+  --ancho-sitio: 1200px;
+
+  /* --- Formas y profundidad ------------------------------- */
+  --r-1: 6px;  --r-2: 12px;  --r-3: 20px;  --r-full: 999px;
+  --sombra-1: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --sombra-2: 0 10px 30px -10px rgba(0, 0, 0, 0.65);
+  --sombra-brillo: 0 0 24px var(--c-impulso-32);
+
+  /* --- Movimiento ----------------------------------------- */
+  --ms-rapido: 140ms;
+  --ms-medio: 260ms;
+  --ms-lento: 520ms;
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+
+  --z-fondo: 0;  --z-contenido: 10;  --z-nav: 100;  --z-panel: 200;
+}
+
+/* Respeta a quien pide menos movimiento: el sitio sigue siendo usable
+   por completo, solo deja de animarse. */
+@media (prefers-reduced-motion: reduce) {
+  :root { --ms-rapido: 0ms; --ms-medio: 0ms; --ms-lento: 0ms; }
+}

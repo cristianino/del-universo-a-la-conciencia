@@ -1,0 +1,380 @@
+{
+  "meta": {
+    "version": 1,
+    "titulo": "De la membrana a la mente",
+    "subtitulo": "Cuatro mil millones de años de evolución del sistema nervioso",
+    "unidad": "millones de años atrás",
+    "escala": {
+      "tipo": "tramos",
+      "descripcion": "El tiempo profundo se comprime y el tiempo reciente se estira, para que los hitos densos no se amontonen. Cada tramo recibe un ancho proporcional a su peso.",
+      "tramos": [
+        { "desde": 4000, "hasta": 1000, "peso": 1.2 },
+        { "desde": 1000, "hasta": 600,  "peso": 1.6 },
+        { "desde": 600,  "hasta": 500,  "peso": 2.4 },
+        { "desde": 500,  "hasta": 200,  "peso": 1.8 },
+        { "desde": 200,  "hasta": 60,   "peso": 1.4 },
+        { "desde": 60,   "hasta": 2,    "peso": 1.5 },
+        { "desde": 2,    "hasta": 0,    "peso": 1.3 }
+      ]
+    }
+  },
+
+  "eras": [
+    { "id": "arcaico",      "nombre": "Arcaico",      "desde": 4000, "hasta": 2500, "color": "#2C3E63" },
+    { "id": "proterozoico", "nombre": "Proterozoico", "desde": 2500, "hasta": 541,  "color": "#365A7A" },
+    { "id": "paleozoico",   "nombre": "Paleozoico",   "desde": 541,  "hasta": 252,  "color": "#2E7C77" },
+    { "id": "mesozoico",    "nombre": "Mesozoico",    "desde": 252,  "hasta": 66,   "color": "#7A5C86" },
+    { "id": "cenozoico",    "nombre": "Cenozoico",    "desde": 66,   "hasta": 0,    "color": "#B0537D" }
+  ],
+
+  "hitos": [
+    {
+      "id": "membrana",
+      "mya": 3800,
+      "era": "arcaico",
+      "titulo": "La membrana",
+      "subtitulo": "Aparece un adentro",
+      "resumen": "Una doble capa de grasa separa un interior de un exterior, y con ello nace la primera diferencia que se puede administrar.",
+      "detalle": [
+        "Antes de que exista cualquier señal hace falta alguien que la reciba. La membrana lipídica resuelve ese problema básico: encierra un volumen de química y lo aísla del mar que lo rodea.",
+        "Esa frontera no solo protege. También permite que las concentraciones de sales sean distintas a un lado y al otro, y una diferencia sostenida es energía disponible. Todo el sistema nervioso posterior vive de administrar esa diferencia."
+      ],
+      "claves": [
+        "Sin frontera no hay señal: alguien tiene que poder estar distinto por dentro",
+        "El desequilibrio químico se convierte en la moneda energética de la vida"
+      ],
+      "etiquetas": ["origen", "química", "célula"],
+      "destacado": true
+    },
+    {
+      "id": "gradiente",
+      "mya": 3500,
+      "era": "arcaico",
+      "titulo": "La primera batería",
+      "subtitulo": "Gradientes de protones",
+      "resumen": "Las células aprenden a bombear cargas a través de la membrana y a cobrar ese trabajo de vuelta en forma de energía.",
+      "detalle": [
+        "Bombear iones hacia afuera cuesta energía, pero deja la membrana cargada como una pila diminuta. Cuando esos iones regresan por un canal, el flujo se puede usar para fabricar ATP.",
+        "Este mecanismo, común a bacterias y a nuestras mitocondrias, establece el principio que después reutilizará la neurona: mantener una diferencia eléctrica lista para descargarse en el momento preciso."
+      ],
+      "claves": [
+        "La célula viva es, literalmente, un sistema eléctrico",
+        "El mismo truco energético se reutilizará para transmitir información"
+      ],
+      "etiquetas": ["energía", "iones", "membrana"]
+    },
+    {
+      "id": "eucariota",
+      "mya": 1800,
+      "era": "proterozoico",
+      "titulo": "La célula compleja",
+      "subtitulo": "Núcleo, mitocondrias y presupuesto energético",
+      "resumen": "Una célula se instala dentro de otra y el resultado dispone de mucha más energía por unidad de material genético.",
+      "detalle": [
+        "La simbiosis que dio origen a la mitocondria multiplicó el presupuesto energético celular. Con más energía disponible, una célula puede permitirse genomas grandes, membranas extensas y maquinaria costosa.",
+        "El sistema nervioso es, en términos metabólicos, un lujo: consume una fracción enorme de la energía del organismo. Sin este salto previo no habría sido pagable."
+      ],
+      "claves": [
+        "Pensar es caro: primero hubo que poder pagarlo",
+        "La complejidad estructural precede a la complejidad funcional"
+      ],
+      "etiquetas": ["energía", "célula", "simbiosis"]
+    },
+    {
+      "id": "bomba-sodio-potasio",
+      "mya": 1500,
+      "era": "proterozoico",
+      "titulo": "La bomba de sodio y potasio",
+      "subtitulo": "Tres afuera, dos adentro",
+      "resumen": "Una proteína gasta ATP para sacar tres iones de sodio e introducir dos de potasio, dejando el interior celular con carga negativa y listo para disparar.",
+      "detalle": [
+        "La bomba no transmite información: prepara el terreno. Al mover más carga positiva hacia afuera que hacia adentro, mantiene el interior alrededor de setenta milivoltios por debajo del exterior. Ese es el potencial de reposo.",
+        "El potencial de reposo funciona como un resorte comprimido. Cuando un canal se abre y deja entrar sodio de golpe, el resorte se suelta y la señal viaja. Después la bomba vuelve a comprimirlo, y para eso quema una porción considerable de toda la energía del cuerpo."
+      ],
+      "claves": [
+        "El reposo no es pasividad: es trabajo constante para sostener el desequilibrio",
+        "Sin gradiente previo no hay impulso posible"
+      ],
+      "etiquetas": ["iones", "membrana", "mecanismo"],
+      "destacado": true
+    },
+    {
+      "id": "multicelular",
+      "mya": 900,
+      "era": "proterozoico",
+      "titulo": "Vivir en colonia",
+      "subtitulo": "El kit de la sinapsis antes de la sinapsis",
+      "resumen": "Los parientes unicelulares de los animales ya fabricaban muchas de las proteínas que después formarían las conexiones neuronales.",
+      "detalle": [
+        "Los coanoflagelados, primos cercanos de los animales, poseen genes de adhesión y de señalización que en nosotros construyen contactos sinápticos. Las piezas existían antes que la función.",
+        "La evolución rara vez inventa desde cero: recombina inventarios previos. Las neuronas surgieron reorganizando herramientas que ya servían para que dos células se reconocieran y se pegaran."
+      ],
+      "claves": [
+        "Las piezas moleculares anteceden al órgano",
+        "La especialización celular es el verdadero punto de partida"
+      ],
+      "etiquetas": ["multicelularidad", "genes", "sinapsis"]
+    },
+    {
+      "id": "esponjas",
+      "mya": 700,
+      "era": "proterozoico",
+      "titulo": "Esponjas",
+      "subtitulo": "Un animal sin neuronas",
+      "resumen": "El primer linaje animal reparte tareas entre tipos celulares distintos, pero coordina sin un solo cable nervioso.",
+      "detalle": [
+        "Una esponja tiene células que filtran, células que sostienen y células que se transforman en lo que haga falta. Es división del trabajo, la condición previa de cualquier tejido especializado.",
+        "La coordinación ocurre por señales químicas lentas que difunden entre células vecinas. Funciona porque la esponja no va a ninguna parte: quien no se mueve puede permitirse ser lento."
+      ],
+      "claves": [
+        "La especialización celular es anterior al sistema nervioso",
+        "Sin movimiento, la difusión química basta"
+      ],
+      "etiquetas": ["animales", "tejidos", "coordinación"]
+    },
+    {
+      "id": "medusas",
+      "mya": 600,
+      "era": "proterozoico",
+      "titulo": "Medusas y anémonas",
+      "subtitulo": "La red nerviosa difusa",
+      "resumen": "Aparecen las primeras neuronas verdaderas, organizadas como una malla sin centro que recorre todo el cuerpo.",
+      "detalle": [
+        "Los cnidarios tienen potenciales de acción, sinapsis químicas y neuronas reconocibles, pero distribuidas en red: no hay jefe, ni delante ni detrás. Un estímulo en cualquier punto propaga una respuesta en todas direcciones.",
+        "Es la arquitectura adecuada para un cuerpo con simetría radial que espera a que el alimento llegue. La señal ya no difunde: viaja rápido y a distancia. Ese es el salto cualitativo."
+      ],
+      "claves": [
+        "Primer sistema nervioso real, sin centralización",
+        "La velocidad de la señal se independiza de la difusión química"
+      ],
+      "etiquetas": ["neurona", "red nerviosa", "impulso"],
+      "destacado": true
+    },
+    {
+      "id": "cefalizacion",
+      "mya": 580,
+      "era": "proterozoico",
+      "titulo": "El movimiento crea la cabeza",
+      "subtitulo": "Bilaterales y cefalización",
+      "resumen": "Cuando un animal se desplaza siempre en la misma dirección, el extremo que va delante se llena de sentidos y de neuronas.",
+      "detalle": [
+        "Los primeros gusanos bilaterales avanzan con un frente definido. Ese frente es el primero en encontrar comida, obstáculos y depredadores, así que ahí conviene concentrar ojos primitivos, quimiorreceptores y tacto.",
+        "Procesar esa información cerca de donde entra ahorra tiempo y cableado. Los ganglios anteriores crecen hasta convertirse en un centro de mando: el antepasado del cerebro. La cabeza no es un plan previo, es la consecuencia geométrica de moverse hacia algún lado."
+      ],
+      "claves": [
+        "Moverse dirigidamente obliga a anticipar, y anticipar exige un centro",
+        "El cerebro aparece donde los sentidos se acumulan",
+        "Simetría bilateral, delante y detrás, arriba y abajo"
+      ],
+      "etiquetas": ["cefalización", "movimiento", "ganglios"],
+      "destacado": true
+    },
+    {
+      "id": "cambrico",
+      "mya": 540,
+      "era": "paleozoico",
+      "titulo": "Explosión cámbrica",
+      "subtitulo": "Ojos, depredación y carrera armamentista",
+      "resumen": "En unos pocos millones de años aparecen ojos con imagen, y ver a distancia cambia por completo el costo de equivocarse.",
+      "detalle": [
+        "Con ojos capaces de formar imágenes, depredador y presa entran en una competencia sin final. Detectar antes, decidir antes y ejecutar antes se vuelve la diferencia entre comer y ser comido.",
+        "Esa presión selectiva favorece sistemas nerviosos más grandes, más rápidos y mejor organizados. El cerebro deja de ser un coordinador y empieza a ser un predictor: modela lo que va a pasar."
+      ],
+      "claves": [
+        "La visión multiplica la información disponible y el costo de procesarla",
+        "Predecir el futuro inmediato se vuelve una ventaja de supervivencia"
+      ],
+      "etiquetas": ["visión", "depredación", "cámbrico"]
+    },
+    {
+      "id": "tubo-neural",
+      "mya": 525,
+      "era": "paleozoico",
+      "titulo": "El tubo neural",
+      "subtitulo": "Los cordados eligen otra arquitectura",
+      "resumen": "En lugar de cordones nerviosos ventrales, nuestro linaje enrolla una lámina de tejido en un tubo hueco a lo largo del dorso.",
+      "detalle": [
+        "El tubo neural dorsal es el plano constructivo que seguimos usando: su extremo anterior se abulta y forma el encéfalo, el resto se convierte en la médula espinal.",
+        "Es una decisión de diseño temprana y prácticamente irreversible. Todo el desarrollo embrionario de los vertebrados, humanos incluidos, sigue repitiendo ese plegamiento."
+      ],
+      "claves": [
+        "Un plano corporal fijado hace medio millar de millones de años nos sigue definiendo",
+        "El encéfalo es el extremo hinchado de un tubo"
+      ],
+      "etiquetas": ["cordados", "desarrollo", "anatomía"]
+    },
+    {
+      "id": "tres-vesiculas",
+      "mya": 500,
+      "era": "paleozoico",
+      "titulo": "Encéfalo en tres partes",
+      "subtitulo": "Los primeros peces",
+      "resumen": "El extremo del tubo se divide en tres vesículas que darán tronco, mesencéfalo y prosencéfalo.",
+      "detalle": [
+        "Cada vesícula se especializa: la posterior en equilibrio y funciones vitales, la media en respuestas visuales rápidas, la anterior en olfato y en la integración de todo lo demás.",
+        "Esa organización en niveles sigue vigente. El cerebro humano no reemplazó estas capas, las conservó y les añadió estructuras encima."
+      ],
+      "claves": [
+        "La evolución añade capas antes que sustituir las existentes",
+        "El tronco encefálico que nos mantiene vivos es más antiguo que los huesos"
+      ],
+      "etiquetas": ["vertebrados", "anatomía", "peces"]
+    },
+    {
+      "id": "mielina",
+      "mya": 425,
+      "era": "paleozoico",
+      "titulo": "Mielina",
+      "subtitulo": "Aislar para ir más rápido",
+      "resumen": "Envolver los axones en capas de grasa multiplica hasta cien veces la velocidad del impulso sin engrosar el cable.",
+      "detalle": [
+        "El impulso deja de recorrer la membrana punto por punto y salta entre los espacios sin aislar. La misma señal llega mucho antes y gastando menos.",
+        "La alternativa para ganar velocidad era engrosar el axón, algo que ocupa demasiado espacio. La mielina permite cerebros densos, con muchísimas conexiones rápidas en un volumen razonable."
+      ],
+      "claves": [
+        "Más velocidad sin más volumen: un problema de ingeniería resuelto con aislamiento",
+        "Hace posible un cerebro compacto y muy conectado"
+      ],
+      "etiquetas": ["axón", "velocidad", "mecanismo"]
+    },
+    {
+      "id": "tetrapodos",
+      "mya": 370,
+      "era": "paleozoico",
+      "titulo": "Salir del agua",
+      "subtitulo": "Tetrápodos y olfato aéreo",
+      "resumen": "Ver y oler en el aire alcanza mucha más distancia que en el agua, y con la distancia aparece el tiempo para planear.",
+      "detalle": [
+        "En tierra, un animal percibe lo que ocurre bastante antes de que le afecte. Ese margen temporal es la materia prima de la deliberación: ya no basta con reaccionar, conviene elegir entre opciones.",
+        "Los circuitos que comparan alternativas antes de actuar encuentran aquí su primera ventaja clara."
+      ],
+      "claves": [
+        "Percibir más lejos permite decidir en vez de solo reaccionar",
+        "El aire cambia la física de los sentidos"
+      ],
+      "etiquetas": ["tetrápodos", "sentidos", "conducta"]
+    },
+    {
+      "id": "palio",
+      "mya": 320,
+      "era": "paleozoico",
+      "titulo": "El palio",
+      "subtitulo": "El tejido que será corteza",
+      "resumen": "En los amniotas, la superficie dorsal del prosencéfalo se organiza en un tejido laminar destinado a asociar información de distintos sentidos.",
+      "detalle": [
+        "El palio no está dedicado a un sentido concreto: recibe entradas de varios y busca coincidencias entre ellas. Es el terreno donde la asociación se vuelve el trabajo principal.",
+        "En reptiles y aves este tejido toma formas distintas a la nuestra y aun así sostiene conductas complejas, lo que sugiere que la inteligencia no depende de una única arquitectura."
+      ],
+      "claves": [
+        "Asociar sentidos distintos abre la puerta al aprendizaje flexible",
+        "Hay más de una arquitectura posible para la cognición compleja"
+      ],
+      "etiquetas": ["corteza", "amniotas", "asociación"]
+    },
+    {
+      "id": "neocorteza",
+      "mya": 200,
+      "era": "mesozoico",
+      "titulo": "Neocorteza de seis capas",
+      "subtitulo": "Mamíferos nocturnos",
+      "resumen": "Aparece un tejido cortical de seis capas con una microestructura que se repite igual en toda su extensión.",
+      "detalle": [
+        "La neocorteza funciona como un módulo genérico: la misma columna de circuitos procesa sonido en una región y tacto en otra. Ampliar capacidad consiste en repetir el módulo, no en inventar uno nuevo.",
+        "Los primeros mamíferos vivían de noche, dependían del olfato, el oído y el tacto, y necesitaban combinar esas señales para reconstruir un mundo que no veían. La corteza es, en buena medida, respuesta a ese problema."
+      ],
+      "claves": [
+        "Un circuito repetible que escala solo con superficie",
+        "Los pliegues del cerebro existen para meter más superficie en el mismo cráneo"
+      ],
+      "etiquetas": ["neocorteza", "mamíferos", "escalabilidad"],
+      "destacado": true
+    },
+    {
+      "id": "primates",
+      "mya": 60,
+      "era": "cenozoico",
+      "titulo": "Primates",
+      "subtitulo": "Ver en relieve y vivir en grupo",
+      "resumen": "Tras la extinción de los dinosaurios, un linaje arborícola desarrolla visión estereoscópica, manos precisas y vida social intensa.",
+      "detalle": [
+        "Saltar entre ramas exige calcular distancias con exactitud, y la visión en relieve ocupa una porción enorme de la corteza. La mano que agarra añade un control motor fino que también consume territorio cortical.",
+        "Vivir en grupo introduce un problema nuevo: predecir lo que hará otro individuo que también está prediciendo. Seguir alianzas, jerarquías y engaños es cognitivamente más caro que cualquier tarea física."
+      ],
+      "claves": [
+        "El grupo social como presión selectiva sobre la inteligencia",
+        "Buena parte de la corteza está dedicada a ver y a manipular"
+      ],
+      "etiquetas": ["primates", "visión", "social"]
+    },
+    {
+      "id": "bipedismo",
+      "mya": 7,
+      "era": "cenozoico",
+      "titulo": "Ponerse de pie",
+      "subtitulo": "Homininos",
+      "resumen": "La postura erguida libera las manos de forma permanente y reorganiza el cuerpo entero, cráneo incluido.",
+      "detalle": [
+        "Caminar en dos piernas deja las manos disponibles todo el tiempo, no solo al detenerse. Transportar, cargar crías y manipular objetos deja de competir con desplazarse.",
+        "El cráneo se reequilibra sobre la columna, lo que permitirá alojar después un encéfalo mucho más pesado. La pelvis, en cambio, se estrecha, y ese conflicto con el tamaño de la cabeza marcará el nacimiento humano."
+      ],
+      "claves": [
+        "Manos libres de forma permanente, no ocasional",
+        "El cambio postural condiciona el crecimiento futuro del cráneo"
+      ],
+      "etiquetas": ["homininos", "bipedismo", "anatomía"]
+    },
+    {
+      "id": "herramientas",
+      "mya": 2.5,
+      "era": "cenozoico",
+      "titulo": "Piedra tallada",
+      "subtitulo": "Homo habilis",
+      "resumen": "Fabricar una herramienta exige planear una secuencia de golpes hacia una forma que todavía no existe.",
+      "detalle": [
+        "Tallar no es golpear: hay que elegir la piedra, prever cómo se fractura y encadenar acciones cuyo beneficio solo llega al final. Es planificación con un objetivo mental sostenido.",
+        "Además hay que enseñarlo. La transmisión de la técnica entre generaciones convierte el aprendizaje social en un factor evolutivo por derecho propio."
+      ],
+      "claves": [
+        "Planificar exige mantener en la mente algo que aún no existe",
+        "La cultura empieza a acumularse y a heredarse"
+      ],
+      "etiquetas": ["herramientas", "cognición", "cultura"]
+    },
+    {
+      "id": "fuego",
+      "mya": 0.8,
+      "era": "cenozoico",
+      "titulo": "El fuego y la cocción",
+      "subtitulo": "Homo erectus",
+      "resumen": "Cocinar predigiere la comida y libera energía y horas de masticación que el cerebro puede aprovechar.",
+      "detalle": [
+        "El alimento cocido entrega más calorías con menos esfuerzo digestivo. El intestino se acorta y el encéfalo, que es tejido carísimo, dispone de un presupuesto mayor.",
+        "El fuego también crea la hoguera: horas de vigilia compartida alrededor de la luz, un espacio para narrar, coordinar y transmitir. La energía y el tiempo social llegan juntos."
+      ],
+      "claves": [
+        "Cocinar es digestión externa: energía extra para un órgano muy costoso",
+        "La sobremesa nocturna favorece la comunicación compleja"
+      ],
+      "etiquetas": ["fuego", "energía", "erectus"],
+      "destacado": true
+    },
+    {
+      "id": "sapiens",
+      "mya": 0.3,
+      "era": "cenozoico",
+      "titulo": "Homo sapiens",
+      "subtitulo": "Un cerebro que se explica a sí mismo",
+      "resumen": "Cerca de mil trescientos centímetros cúbicos, ochenta y seis mil millones de neuronas y una capacidad inédita de acumular conocimiento fuera del cuerpo.",
+      "detalle": [
+        "Lo distintivo no es solo el tamaño. Es el lenguaje, que permite que la experiencia de una persona se convierta en información utilizable por otra sin que esta tenga que vivirla.",
+        "Con la escritura, el conocimiento sale del cráneo y se almacena en objetos. La evolución biológica del cerebro casi se detiene, mientras la cultura que produce sigue acelerándose."
+      ],
+      "claves": [
+        "El lenguaje externaliza la experiencia y la vuelve heredable",
+        "Un órgano formado por presiones de supervivencia terminó estudiándose a sí mismo"
+      ],
+      "etiquetas": ["sapiens", "lenguaje", "cultura"],
+      "destacado": true
+    }
+  ]
+}

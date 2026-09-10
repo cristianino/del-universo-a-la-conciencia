@@ -1,0 +1,230 @@
+/* ============================================================
+   PAGINAS — recurso educativo, PQR y canales de participacion
+   ============================================================ */
+
+/* --- Grafica del potencial de accion ---------------------- */
+.grafica {
+  background: var(--c-superficie);
+  border: 1px solid var(--c-borde);
+  border-radius: var(--r-3);
+  padding: var(--e-5);
+  margin-block: var(--e-6);
+}
+.grafica svg { width: 100%; height: auto; }
+.grafica figcaption {
+  font-size: var(--t-peq);
+  color: var(--c-texto-tenue);
+  margin-top: var(--e-4);
+  max-width: var(--ancho-texto);
+}
+
+/* --- Flujo paso a paso ------------------------------------ */
+.flujo { list-style: none; margin: var(--e-6) 0 0; padding: 0; counter-reset: paso; }
+.flujo li {
+  position: relative;
+  counter-increment: paso;
+  padding: 0 0 var(--e-6) var(--e-8);
+  max-width: none;
+}
+.flujo li::before {
+  content: counter(paso);
+  position: absolute;
+  left: 0; top: 0;
+  width: 40px; height: 40px;
+  display: grid; place-items: center;
+  border: 2px solid var(--c-impulso);
+  border-radius: var(--r-full);
+  background: var(--c-abismo);
+  color: var(--c-impulso);
+  font-family: var(--f-dato);
+  font-size: var(--t-peq);
+}
+.flujo li:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 19px; top: 44px; bottom: 8px;
+  width: 2px;
+  background: linear-gradient(var(--c-impulso-32), transparent);
+}
+.flujo h3 { margin-bottom: var(--e-2); }
+.flujo p { margin-bottom: 0; }
+.flujo .flujo__dato {
+  font-family: var(--f-dato);
+  font-size: var(--t-micro);
+  color: var(--c-texto-tenue);
+  display: block;
+  margin-top: var(--e-2);
+}
+
+/* --- PQR (acordeón) --------------------------------------- */
+.pqr { display: grid; gap: var(--e-3); margin-top: var(--e-5); }
+.pqr details {
+  background: var(--c-superficie);
+  border: 1px solid var(--c-borde);
+  border-radius: var(--r-2);
+  overflow: hidden;
+}
+.pqr summary {
+  padding: var(--e-4) var(--e-5);
+  cursor: pointer;
+  font-weight: 600;
+  list-style: none;
+  display: flex; align-items: center; gap: var(--e-3);
+}
+.pqr summary::-webkit-details-marker { display: none; }
+.pqr summary::before {
+  content: '+';
+  color: var(--c-impulso);
+  font-family: var(--f-dato);
+  font-size: 1.2rem;
+  flex: none;
+}
+.pqr details[open] summary::before { content: '−'; }
+.pqr details[open] summary { border-bottom: 1px solid var(--c-borde); }
+.pqr .pqr__cuerpo { padding: var(--e-4) var(--e-5) var(--e-2) calc(var(--e-5) + 1.4rem); }
+
+/* --- Formularios y encuesta -------------------------------- */
+.campo { display: grid; gap: var(--e-2); margin-bottom: var(--e-4); }
+.campo label { font-size: var(--t-peq); font-weight: 600; }
+.campo :is(input, textarea, select) {
+  font: inherit;
+  color: var(--c-texto);
+  background: var(--c-abismo);
+  border: 1px solid var(--c-borde);
+  border-radius: var(--r-1);
+  padding: var(--e-3);
+  width: 100%;
+}
+.campo :is(input, textarea):focus { border-color: var(--c-impulso); }
+.campo textarea { min-height: 130px; resize: vertical; }
+.campo__nota { font-size: var(--t-micro); color: var(--c-texto-tenue); }
+
+.opciones { display: grid; gap: var(--e-2); border: 0; margin: 0 0 var(--e-4); padding: 0; }
+.opciones legend { font-size: var(--t-peq); font-weight: 600; margin-bottom: var(--e-3); padding: 0; }
+.opcion {
+  display: flex; align-items: center; gap: var(--e-3);
+  padding: var(--e-3) var(--e-4);
+  border: 1px solid var(--c-borde);
+  border-radius: var(--r-1);
+  cursor: pointer;
+  transition: border-color var(--ms-rapido) var(--ease), background var(--ms-rapido) var(--ease);
+}
+.opcion:hover { border-color: var(--c-impulso); background: var(--c-impulso-12); }
+.opcion input { accent-color: var(--c-impulso); }
+
+.aviso {
+  margin-top: var(--e-4);
+  padding: var(--e-3) var(--e-4);
+  border-radius: var(--r-1);
+  font-size: var(--t-peq);
+  border: 1px solid var(--c-borde);
+}
+.aviso[data-estado='ok'] { border-color: var(--c-impulso); color: var(--c-impulso); }
+.aviso[data-estado='error'] { border-color: var(--c-sinapsis); color: var(--c-sinapsis); }
+.aviso[hidden] { display: none; }
+
+.canales { align-items: start; }
+.canal__icono {
+  width: 44px; height: 44px;
+  display: grid; place-items: center;
+  border-radius: var(--r-full);
+  background: var(--c-impulso-12);
+  color: var(--c-impulso);
+  margin-bottom: var(--e-4);
+}
+
+/* ============================================================
+   PAGINA "LA TESIS" — cadena de niveles, citas y referencias
+   ============================================================ */
+
+.registro__cabeza {
+  display: flex;
+  align-items: center;
+  gap: var(--e-3);
+  font-weight: 650;
+  color: var(--c-texto);
+  margin-bottom: var(--e-3);
+}
+
+/* La cadena de niveles: cada eslabon separado por una flecha dibujada en CSS,
+   de modo que en pantallas estrechas la lista simplemente sigue fluyendo. */
+.cadena {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--e-2) 0;
+  list-style: none;
+  margin: var(--e-6) 0;
+  padding: 0;
+  counter-reset: eslabon;
+}
+.cadena li {
+  position: relative;
+  max-width: none;
+  font-family: var(--f-dato);
+  font-size: var(--t-peq);
+  padding: var(--e-2) var(--e-3);
+  border: 1px solid var(--c-borde);
+  border-radius: var(--r-1);
+  background: var(--c-superficie);
+}
+.cadena li::after {
+  content: '→';
+  display: inline-block;
+  padding-inline: var(--e-2);
+  color: var(--c-impulso);
+  border: 0;
+}
+.cadena li:last-child {
+  border-color: color-mix(in srgb, var(--c-sinapsis) 60%, var(--c-borde));
+  color: var(--c-sinapsis);
+}
+.cadena li:last-child::after { content: ''; padding: 0; }
+
+.cita {
+  margin: var(--e-6) 0 0;
+  padding: var(--e-5);
+  border-left: 3px solid var(--c-impulso);
+  background: color-mix(in srgb, var(--c-superficie) 75%, transparent);
+  border-radius: 0 var(--r-2) var(--r-2) 0;
+}
+.cita p {
+  margin: 0;
+  font-family: var(--f-titulo);
+  font-size: clamp(1.05rem, 1rem + 0.5vw, 1.3rem);
+  line-height: 1.45;
+}
+.cita--fuerte {
+  border-left-color: var(--c-sinapsis);
+  margin-top: var(--e-5);
+}
+
+.tarjeta__quien {
+  font-family: var(--f-dato);
+  font-size: var(--t-micro);
+  letter-spacing: var(--ls-etiqueta);
+  text-transform: uppercase;
+  color: var(--c-texto-tenue);
+  margin-bottom: var(--e-3);
+}
+
+.dato {
+  font-family: var(--f-dato);
+  font-size: 0.92em;
+  color: var(--c-impulso);
+}
+
+.aviso-largo {
+  border: 1px solid var(--c-borde);
+  border-radius: var(--r-2);
+  padding: var(--e-5);
+  background: color-mix(in srgb, var(--c-superficie) 60%, transparent);
+}
+.aviso-largo p { margin: 0; color: var(--c-texto-tenue); }
+
+.referencias {
+  padding-left: 1.2em;
+  font-size: var(--t-peq);
+  color: var(--c-texto-tenue);
+}
+.referencias li { margin-bottom: var(--e-3); }

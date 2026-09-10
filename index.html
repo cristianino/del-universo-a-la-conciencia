@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>La historia del cerebro: del universo a la conciencia</title>
+  <meta name="description" content="Recorrido interactivo por 13.800 millones de años: cómo la materia se organiza, coopera, se especializa y termina procesando información sobre el mundo." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;550;650&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <a class="salto-contenido" href="#contenido">Saltar al contenido</a>
+  <canvas class="fondo-gl" data-intensidad="1" aria-hidden="true"></canvas>
+
+  <nav class="nav">
+    <div class="contenedor nav__interior">
+      <a class="nav__marca" href="index.html"><span class="nav__punto"></span> Del universo a la conciencia</a>
+      <button class="nav__menu" type="button" aria-expanded="false" aria-controls="menu-principal">Menú</button>
+      <ul class="nav__enlaces" id="menu-principal">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="linea-tiempo.html">Línea de tiempo</a></li>
+        <li><a href="tesis.html">La tesis</a></li>
+        <li><a href="recursos.html">Aprende</a></li>
+        <li><a href="participa.html">Participa</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="capa-contenido">
+    <main id="contenido">
+      <header class="contenedor portada">
+        <p class="etiqueta">Trece mil ochocientos millones de años</p>
+        <h1 class="portada__titulo">Del universo a la conciencia</h1>
+        <p class="portada__entrada">
+          El cerebro no apareció de golpe ni fue el destino de nada. Es el último
+          eslabón conocido de una misma secuencia: la materia se organiza en
+          estructuras cada vez más complejas, esas estructuras cooperan, se
+          especializan y terminan procesando información sobre el mundo.
+        </p>
+        <div class="acciones">
+          <a class="boton boton--primario" href="linea-tiempo.html">Recorrer la línea de tiempo</a>
+          <a class="boton boton--fantasma" href="tesis.html">Leer el argumento completo</a>
+        </div>
+      </header>
+
+      <section class="contenedor seccion" aria-labelledby="ideas">
+        <p class="etiqueta">Tres ideas que sostienen todo el recorrido</p>
+        <h2 id="ideas">El patrón que se repite en cada nivel</h2>
+        <div class="rejilla">
+          <article class="tarjeta">
+            <h3>La especialización fue la clave</h3>
+            <p>Mientras todas las células hacían de todo, ninguna podía hacer nada
+            especialmente bien. Repartir tareas permitió que unas se dedicaran a
+            detectar y otras a responder: el primer paso hacia una neurona.</p>
+          </article>
+          <article class="tarjeta">
+            <h3>El movimiento creó la cabeza</h3>
+            <p>Un animal que siempre avanza en la misma dirección tiene un extremo
+            que llega primero a todo. Ahí se acumulan los sentidos, y donde se
+            acumulan los sentidos se concentra el procesamiento.</p>
+          </article>
+          <article class="tarjeta">
+            <h3>Cooperar inventa capacidades</h3>
+            <p>Una bacteria dentro de otra célula produjo la mitocondria; células
+            que se quedaron juntas produjeron un cuerpo. En cada nivel, integrar
+            unidades simples genera propiedades que ninguna tenía por separado.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="contenedor seccion" aria-labelledby="que-hay">
+        <h2 id="que-hay">Qué vas a encontrar</h2>
+        <div class="rejilla">
+          <article class="tarjeta">
+            <h3>Línea de tiempo interactiva</h3>
+            <p>Treinta y dos hitos sobre un eje temporal dibujado en canvas y WebGL,
+            del Big Bang a la cultura. Cada punto se expande al pasar el cursor y
+            declara qué nivel de organización aporta.</p>
+            <p><a href="linea-tiempo.html">Entrar al recorrido</a></p>
+          </article>
+          <article class="tarjeta">
+            <h3>Recurso educativo</h3>
+            <p>Un diagrama paso a paso de cómo viaja un impulso nervioso y una
+            sección de preguntas frecuentes con las confusiones más habituales
+            sobre el tema.</p>
+            <p><a href="recursos.html">Aprender el procedimiento</a></p>
+          </article>
+          <article class="tarjeta">
+            <h3>El argumento completo</h3>
+            <p>Por qué esta historia se cuenta así, qué parte es ciencia establecida
+            y qué parte es interpretación, las arquitecturas nerviosas comparadas y
+            hacia dónde podría ir el cerebro humano.</p>
+            <p><a href="tesis.html">Leer la tesis</a></p>
+          </article>
+          <article class="tarjeta">
+            <h3>Canales abiertos</h3>
+            <p>Escribe por correo, responde la encuesta de dos preguntas o abre un
+            hilo de discusión público en el repositorio del proyecto.</p>
+            <p><a href="participa.html">Participar</a></p>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer class="pie">
+      <div class="contenedor">
+        <p>Proyecto académico · Técnicas de la comunicación virtual · Universidad Manuela Beltrán</p>
+        <p class="tenue">Cristian David Niño Chalarca · Contenido divulgativo con fines educativos</p>
+      </div>
+    </footer>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

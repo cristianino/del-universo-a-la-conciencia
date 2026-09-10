@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>La tesis · La historia del cerebro</title>
+  <meta name="description" content="El argumento que sostiene la línea de tiempo: organización, cooperación, especialización e información." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;550;650&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <a class="salto-contenido" href="#contenido">Saltar al contenido</a>
+  <canvas class="fondo-gl" data-intensidad="0.5" aria-hidden="true"></canvas>
+
+  <nav class="nav">
+    <div class="contenedor nav__interior">
+      <a class="nav__marca" href="index.html"><span class="nav__punto"></span> Del universo a la conciencia</a>
+      <button class="nav__menu" type="button" aria-expanded="false" aria-controls="menu-principal">Menú</button>
+      <ul class="nav__enlaces" id="menu-principal">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="linea-tiempo.html">Línea de tiempo</a></li>
+        <li><a href="tesis.html">La tesis</a></li>
+        <li><a href="recursos.html">Aprende</a></li>
+        <li><a href="participa.html">Participa</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="capa-contenido">
+    <main id="contenido">
+      <header class="contenedor seccion--corta">
+        <p class="etiqueta">El argumento</p>
+        <h1>Una sola historia, contada como un solo proceso</h1>
+        <p class="portada__entrada">Esta línea de tiempo narra la historia del cerebro humano
+        como parte de una continuidad mucho mayor: desde el origen del universo, pasando por la
+        formación de los elementos, la Tierra, la química prebiótica y la vida, hasta el sistema
+        nervioso, la conciencia y la cultura.</p>
+        <p>La intención no es presentar los acontecimientos como una secuencia perfectamente
+        determinada, ni afirmar que cada transición ocurrió exactamente como se describe. El eje
+        conceptual es otro: <strong>la organización creciente de la materia, la cooperación, la
+        especialización y el procesamiento de información</strong>.</p>
+      </header>
+
+      <section class="contenedor seccion" aria-labelledby="registros">
+        <p class="etiqueta">Cómo leer esto</p>
+        <h2 id="registros">Tres registros distintos</h2>
+        <p>No todo lo que se afirma aquí tiene el mismo respaldo. Mezclarlo sería deshonesto, así
+        que cada hito de la línea declara a cuál de los tres pertenece, y en el recorrido puedes
+        atenuar los que no te interesen para ver cuánto queda.</p>
+        <div class="rejilla">
+          <article class="tarjeta" data-registro="establecido">
+            <p class="registro__cabeza"><span class="lt__marca"></span> Conocimiento establecido</p>
+            <p>Respaldado por evidencia amplia y consenso científico actual. La endosimbiosis, la
+            neocorteza de seis capas o el funcionamiento del potencial de acción entran aquí.</p>
+          </article>
+          <article class="tarjeta" data-registro="hipotesis">
+            <p class="registro__cabeza"><span class="lt__marca"></span> Hipótesis en discusión</p>
+            <p>Hay evidencia y modelos, pero no una explicación única aceptada. El origen de la vida,
+            la primera membrana o si las neuronas se inventaron una o dos veces.</p>
+          </article>
+          <article class="tarjeta" data-registro="interpretacion">
+            <p class="registro__cabeza"><span class="lt__marca"></span> Interpretación filosófica</p>
+            <p>Lectura del proceso, no hecho demostrado. El tramo final, el de un sistema que
+            termina preguntándose por su propia existencia, es exactamente esto.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="contenedor seccion" aria-labelledby="cadena-titulo">
+        <p class="etiqueta">Síntesis</p>
+        <h2 id="cadena-titulo">Una sola cadena de niveles</h2>
+        <p>Cada eslabón añade una forma de organización que el anterior no tenía. Ninguno estaba
+        planeado desde el anterior.</p>
+        <ol class="cadena">
+          <li>universo</li><li>estrellas</li><li>elementos</li><li>moléculas</li>
+          <li>química prebiótica</li><li>vida</li><li>células</li><li>cooperación</li>
+          <li>multicelularidad</li><li>comunicación</li><li>sistema nervioso</li>
+          <li>cerebro</li><li>cognición</li><li>conciencia</li><li>lenguaje</li><li>cultura</li>
+        </ol>
+        <blockquote class="cita">
+          <p>Un sistema puede adquirir capacidades nuevas cuando distintas unidades cooperan y se
+          integran. La unidad mayor termina teniendo propiedades que ninguna de sus partes poseía
+          por separado.</p>
+        </blockquote>
+      </section>
+
+      <section class="contenedor seccion" aria-labelledby="arquitecturas">
+        <p class="etiqueta">Comparación</p>
+        <h2 id="arquitecturas">Tipos de organización nerviosa</h2>
+        <p>Arquitecturas distintas para el mismo problema: cómo mover información dentro de un
+        cuerpo. Ninguna es un borrador de la siguiente.</p>
+        <div class="rejilla">
+          <article class="tarjeta">
+            <h3>Red difusa</h3>
+            <p class="tarjeta__quien">Cnidarios: medusas, hidras, corales</p>
+            <p>Las neuronas se reparten por todo el cuerpo sin centro de mando, y el estímulo se
+            propaga en cualquier dirección. Funciona bien en cuerpos de simetría radial, que no
+            privilegian un frente.</p>
+          </article>
+          <article class="tarjeta">
+            <h3>Cordones y ganglios</h3>
+            <p class="tarjeta__quien">Platelmintos y anélidos</p>
+            <p>La información deja de propagarse de forma difusa y circula por cordones
+            longitudinales con engrosamientos —los ganglios— que agrupan neuronas por segmento, más
+            un ganglio cefálico en el extremo delantero.</p>
+          </article>
+          <article class="tarjeta">
+            <h3>Encéfalo y médula dorsal</h3>
+            <p class="tarjeta__quien">Vertebrados</p>
+            <p>Tubo neural en posición dorsal y un encéfalo dividido en tres regiones que después se
+            especializan. Es el grado máximo de centralización: un órgano recibe, integra, decide y
+            ordena.</p>
+          </article>
+          <article class="tarjeta">
+            <h3>Cordón ventral y cerebro distribuido</h3>
+            <p class="tarjeta__quien">Artrópodos y cefalópodos</p>
+            <p>Otra solución para el mismo problema: cordón nervioso ventral y ganglios
+            segmentarios. El pulpo mantiene la mayoría de sus neuronas en los brazos, prueba de que
+            no hay una única ruta evolutiva hacia el cerebro humano.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="contenedor seccion" aria-labelledby="hominido">
+        <p class="etiqueta">Lo nuestro</p>
+        <h2 id="hominido">Rasgos propios del cerebro homínido</h2>
+        <p>Qué distingue a nuestro encéfalo del de los otros primates, más allá del tamaño.</p>
+        <div class="rejilla">
+          <article class="tarjeta">
+            <h3>Corteza prefrontal</h3>
+            <p>Crece de forma desproporcionada respecto al resto del encéfalo. Sostiene la
+            planificación a largo plazo, la inhibición de respuestas inmediatas y la evaluación de
+            acciones que todavía no han ocurrido.</p>
+          </article>
+          <article class="tarjeta">
+            <h3>Lateralización y lenguaje</h3>
+            <p>Las funciones se reparten de forma asimétrica entre los hemisferios, y aparecen
+            regiones especializadas en producir y comprender lenguaje, asociadas a las áreas de
+            Broca y Wernicke.</p>
+          </article>
+          <article class="tarjeta">
+            <h3>Genes del linaje</h3>
+            <p>Duplicaciones propias del linaje humano —<span class="dato">NOTCH2NL</span>,
+            <span class="dato">ARHGAP11B</span>, <span class="dato">SRGAP2C</span>— aumentan los
+            progenitores corticales y retrasan la maduración de las sinapsis. No hubo una sola
+            mutación decisiva, sino varios cambios acumulados.</p>
+          </article>
+        </div>
+
+        <div class="rejilla" style="margin-top: var(--e-5)">
+          <article class="tarjeta">
+            <p class="etiqueta">Costo metabólico</p>
+            <p>El encéfalo humano representa cerca del 2 % de la masa corporal y consume alrededor
+            del 20 % de la energía en reposo. Un órgano tan caro solo se sostiene si compensa: la
+            cognición tuvo que pagar su propio mantenimiento.</p>
+          </article>
+          <article class="tarjeta">
+            <p class="etiqueta">Desarrollo prolongado</p>
+            <p>Nacemos con el cerebro muy inmaduro y buena parte del cableado se establece fuera del
+            útero. Eso expone el desarrollo neuronal al entorno social y cultural, y convierte la
+            crianza en parte del proceso de construcción del cerebro.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="contenedor seccion" aria-labelledby="para-que">
+        <p class="etiqueta">La pregunta corta</p>
+        <h2 id="para-que">¿Para qué surgió el cerebro?</h2>
+        <blockquote class="cita cita--fuerte">
+          <p>El cerebro no surgió para pensar. Surgió para coordinar: un cuerpo que se mueve
+          necesita detectar el entorno, integrar señales dispersas, elegir una respuesta y
+          ejecutarla a tiempo. El pensamiento abstracto llegó después, como un uso derivado de esa
+          maquinaria de coordinación.</p>
+        </blockquote>
+      </section>
+
+      <section class="contenedor seccion" aria-labelledby="futuro">
+        <p class="etiqueta">Proyección, no predicción</p>
+        <h2 id="futuro">El cerebro humano dentro de 5.000 años</h2>
+        <p>Cinco mil años son pocos para la selección natural: el volumen y la arquitectura del
+        encéfalo cambiarán poco. Lo que sí cambiará es <strong>dónde ocurre el procesamiento</strong>.
+        La escritura ya externalizó la memoria y el cálculo, y es previsible que la cultura y la
+        técnica sigan absorbiendo funciones que hoy resolvemos dentro del cráneo.</p>
+        <p>Cabe además una presión nueva, que la evolución no había enfrentado antes: la
+        intervención sobre el propio genoma y sobre el desarrollo. El cerebro humano podría ser el
+        primer órgano cuya siguiente etapa no la decida el ambiente, sino el sistema que se pregunta
+        por sí mismo.</p>
+        <p class="tenue">Esto es una interpretación razonada, no una predicción científica.</p>
+      </section>
+
+      <section class="contenedor seccion" aria-labelledby="advertencia">
+        <h2 id="advertencia" class="solo-lectores">Advertencia final</h2>
+        <div class="aviso-largo">
+          <p>La evolución no tiene una meta, y esta cadena no significa que el cerebro humano fuera
+          su destino. Lo que muestra es otra cosa: a lo largo de la historia del universo han
+          aparecido sistemas capaces de organizar materia y energía de formas cada vez más
+          complejas, conservar información, procesarla y responder a su entorno. El cerebro es uno
+          de los más sofisticados que conocemos de ese proceso y, a través de la conciencia y el
+          lenguaje, se convirtió en un sistema biológico capaz de construir modelos del universo y
+          preguntarse por su propia existencia.</p>
+        </div>
+      </section>
+
+      <section class="contenedor seccion" aria-labelledby="referencias">
+        <p class="etiqueta">Fuentes</p>
+        <h2 id="referencias">Referencias</h2>
+        <ol class="referencias">
+          <li>Näjle, S. R. et al. (2023). Stepwise emergence of the neuronal gene expression program
+          in early animal evolution. <em>Cell</em>, 186(21).</li>
+          <li>Florio, M. et al. (2015). Human-specific gene ARHGAP11B promotes basal progenitor
+          amplification and neocortex expansion. <em>Science</em>, 347(6229).</li>
+          <li>Fiddes, I. T. et al. (2018). Human-specific NOTCH2NL genes affect Notch signaling and
+          cortical neurogenesis. <em>Cell</em>, 173(6).</li>
+        </ol>
+        <p class="tenue">Las secciones de interpretación filosófica no se apoyan en estas fuentes:
+        se identifican como tales en la línea de tiempo.</p>
+      </section>
+    </main>
+
+    <footer class="pie">
+      <div class="contenedor">
+        <p>Proyecto académico · Técnicas de la comunicación virtual · Universidad Manuela Beltrán</p>
+        <p class="tenue">Cristian David Niño Chalarca · Contenido divulgativo con fines educativos</p>
+      </div>
+    </footer>
+  </div>
+
+  <script type="module" src="/src/pagina-tesis.js"></script>
+</body>
+</html>
