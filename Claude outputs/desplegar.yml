@@ -1,0 +1,62 @@
+name: Desplegar en GitHub Pages
+
+# Cada push a main valida los datos, construye el sitio y lo publica.
+# También se puede lanzar a mano desde la pestaña Actions.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Permisos mínimos: solo lo que necesita el despliegue de Pages.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Si se acumulan varios push, se publica el último y se descartan los anteriores.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  construir:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar el repositorio
+        uses: actions/checkout@v4
+
+      - name: Preparar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: Validar los datos de la línea de tiempo
+        run: npm run validar
+
+      - name: Construir el sitio
+        run: npm run build
+        env:
+          # Viven en Settings → Secrets and variables → Actions.
+          # Si no existen, el build sale igual: el formulario deriva al foro.
+          VITE_CORREO_CONTACTO: ${{ secrets.VITE_CORREO_CONTACTO }}
+          VITE_ENDPOINT_FORMULARIO: ${{ secrets.VITE_ENDPOINT_FORMULARIO }}
+
+      - name: Preparar el artefacto de Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  desplegar:
+    needs: construir
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.despliegue.outputs.page_url }}
+    steps:
+      - name: Publicar en GitHub Pages
+        id: despliegue
+        uses: actions/deploy-pages@v4
