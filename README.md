@@ -83,9 +83,9 @@ cada campo está en `docs/guia-contenido.md`.
 
 ## Notas de construcción
 
-- La carpeta vive en OneDrive y el montaje no permite borrar archivos, así que
-  el build usa nombres de salida estables (`assets/main.js`, `assets/linea.css`…)
-  y sobrescribe en lugar de vaciar `/dist`. Como los nombres no cambian entre
-  versiones, conviene subir a S3 con `Cache-Control: max-age=300` en los assets
-  o invalidar la caché de CloudFront al desplegar.
-- La carpeta `_to_delete/` guarda builds antiguos; se puede borrar a mano.
+- El build NO vacía `/dist`: la carpeta vive en OneDrive y el montaje no permite
+  borrar archivos. En CI no importa, porque el runner parte de cero; en local se
+  acumulan los assets de builds anteriores y se borran a mano cuando molesten.
+- Los nombres de salida llevan hash, que es el comportamiento por defecto de
+  Vite. Es lo que evita que un visitante con el sitio ya cacheado siga viendo el
+  JavaScript de la versión anterior.
