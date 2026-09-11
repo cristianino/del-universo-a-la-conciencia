@@ -41,7 +41,10 @@ export function montarForo(selector) {
     'data-mapping': 'pathname',
     'data-reactions-enabled': '1',
     'data-emit-metadata': '0',
-    'data-input-position': 'top',
+    'data-input-position': 'bottom',
+    // El sitio es oscuro siempre, así que se fija el tema en lugar de seguir la
+    // preferencia del sistema: con preferred_color_scheme, un visitante con el
+    // sistema en claro vería un recuadro blanco sobre el fondo abismo.
     'data-theme': 'transparent_dark',
     'data-lang': 'es',
   }).forEach(([k, v]) => s.setAttribute(k, v));
