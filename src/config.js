@@ -28,9 +28,9 @@ export const CONFIG = {
   // Foro de discusión (Giscus sobre GitHub Discussions).
   // Los identificadores se obtienen en https://giscus.app
   giscus: {
-    repoId: '',
-    categoria: 'General',
-    categoriaId: '',
+    repoId: 'R_kgDOUV1d9Q',
+    categoria: 'Comentarios',
+    categoriaId: 'DIC_kwDOUV1d9c4DFWAh',
   },
 };
 
