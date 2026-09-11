@@ -7,3 +7,10 @@ Thumbs.db
 .env
 .env.*
 !.env.example
+
+# Restos que deja Vite en Windows al recargar la configuración
+vite.config.js.timestamp-*
+
+# Carpetas de trabajo que no pertenecen al proyecto
+_to_delete/
+Claude outputs/
