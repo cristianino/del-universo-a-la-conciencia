@@ -3,7 +3,7 @@
  * Si aún no hay identificadores configurados, se muestra un aviso con el
  * enlace al repositorio en lugar de un hueco vacío.
  */
-import { CONFIG, urlRepo } from '../config.js';
+import { CONFIG, urlRepo, hayCanalDirecto } from '../config.js';
 
 export function montarForo(selector) {
   const destino = document.querySelector(selector);
@@ -13,13 +13,18 @@ export function montarForo(selector) {
   const { repoId, categoria, categoriaId } = CONFIG.giscus;
 
   if (!usuario || !repo || !repoId || !categoriaId) {
+    // Sin Giscus, el aviso remite al formulario solo si el formulario funciona:
+    // en caso contrario cada canal mandaría al otro y el visitante daría vueltas.
+    const alternativa = hayCanalDirecto()
+      ? 'Mientras tanto puedes escribir por el formulario de esta misma página.'
+      : 'Mientras tanto, la vía abierta es abrir un hilo directamente en el repositorio.';
+
     destino.innerHTML = `
       <div class="tarjeta">
         <h3>Foro en preparación</h3>
-        <p>El hilo público de discusión se abrirá en las Discussions del
-        repositorio del proyecto. Mientras tanto puedes escribir por el
-        formulario de esta misma página.</p>
-        ${urlRepo() ? `<p><a href="${urlRepo()}/discussions" target="_blank" rel="noopener">Ir a las discusiones del repositorio</a></p>` : ''}
+        <p>El hilo público de discusión se abrirá aquí mismo, sobre las Discussions
+        del repositorio del proyecto. ${alternativa}</p>
+        ${urlRepo() ? `<p><a href="${urlRepo()}/discussions" target="_blank" rel="noopener">Abrir un hilo en el repositorio</a></p>` : ''}
       </div>`;
     return;
   }
