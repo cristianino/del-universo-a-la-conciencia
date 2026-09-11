@@ -17,9 +17,27 @@ Beltrán. Cristian David Niño Chalarca.
 ```bash
 npm install      # una sola vez
 npm run dev      # servidor de desarrollo en http://localhost:5173
-npm run build    # genera /dist, que es lo que se sube a S3
+npm run validar  # revisa que timeline.json esté bien formado
+npm run build    # valida y genera /dist
 npm run preview  # revisa /dist tal como quedará publicado
 ```
+
+## Publicación
+
+Cada push a `main` despliega en GitHub Pages mediante
+`.github/workflows/desplegar.yml`:
+
+    https://cristianino.github.io/del-universo-a-la-conciencia/
+
+El paso a paso está en `docs/despliegue-pages.md`. Para publicar además en un
+bucket de S3, `docs/despliegue-s3.md`.
+
+## Datos sensibles
+
+El correo de contacto y el endpoint del formulario no están en el código: se
+leen de variables de entorno (`.env.local` en tu máquina, secretos de Actions en
+CI). Copia `.env.example` a `.env.local` para trabajar en local. Sin esos
+valores el sitio funciona igual y el formulario deriva al foro.
 
 ## Estructura
 
